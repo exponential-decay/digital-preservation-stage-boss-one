@@ -3,13 +3,16 @@ import sys
 import time
 import argparse
 
+DIR_TEXT = "%DIR%"
+SLEEP_TIME = 30
+
 sig_path = "droid.properties/signatures/"
 
 sig_file = "DROID_SignatureFile_V85.xml"
 container_sig_file = "container-signature-20160629.xml"
 
-java_no_container = 'java -Xmx1000m -jar droid-command-line-6.2.1.jar -Nr "%DIR%" -Ns "' + sig_path + sig_file + '" -R'
-java_container = 'java -Xmx1000m -jar droid-command-line-6.2.1.jar -Nr "%DIR%" -Ns "' + sig_path + sig_file + '"-Nc "' + sig_path + container_sig_file + '" -R'
+droid_no_container = 'java -Xmx1000m -jar droid-command-line-6.2.1.jar -Nr "%DIR%" -Ns "' + sig_path + sig_file + '" -R'
+droid_container = 'java -Xmx1000m -jar droid-command-line-6.2.1.jar -Nr "%DIR%" -Ns "' + sig_path + sig_file + '"-Nc "' + sig_path + container_sig_file + '" -R'
 
 nul = "> nul"
 
@@ -38,9 +41,9 @@ print sf_no_three
 
 def run_tests():
    start_time = time.time()
+   os.system(sf_no_one.replace(DIR_TEXT, "-version"))
+   time.sleep(SLEEP_TIME)
    outputtime(start_time)
-
-   os.system(sf_no_one.replace("%DIR%", "-version"))
 
 def outputtime(start_time):
    sys.stderr.write("\n" + "--- %s seconds ---" % (time.time() - start_time) + "\n")
