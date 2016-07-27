@@ -1,9 +1,32 @@
 import os
 import sys
 import time
+import math
 import shutil
 import argparse
 from os.path import expanduser
+
+class stddev:
+   
+   mean = 0
+   std_dev = 0
+
+   def calc_mean(self, number_list):
+      len_list = len(number_list)
+      total = 0
+      for li in number_list:
+         total = total + li
+      self.mean = total/len_list      
+      return self.mean
+      
+   def calc_std_dev(self, number_list):
+      #=SQRT(((G6-L6)^2+(H6-L6)^2+(I6-L6)^2+(J6-L6)^2+(K6-L6)^2)/5)
+      len_list = len(number_list)
+      total = 0
+      for li in number_list:
+         total = total + ((li-self.mean)**2)
+      total = total/len_list
+      return math.sqrt(total)
 
 class testinfo:
 
@@ -105,13 +128,30 @@ def run_cmd(cmd):
    os.system(cmd)
    return output_cmd_time(cmd_start_time)
 
+def add_csv_field(val):
+   sys.stdout.write(",(" + str(val) + ")")
+   
 def write_output(text, time_list):
    time_list.pop(0)
    sys.stdout.write(text.replace(" > nul", "") + ",")
    new_t = []
    for t in time_list:
       new_t.append(str(t))
-   sys.stdout.write(','.join(new_t) + "\n")
+   sys.stdout.write(','.join(new_t))
+   
+   dev = stddev()
+   me = dev.calc_mean(time_list)
+   sd = dev.calc_std_dev(time_list)
+   
+   #seconds
+   add_csv_field(me)
+   add_csv_field(sd)
+   
+   #minutes
+   add_csv_field(me/60)
+   add_csv_field(me/60)
+   
+   sys.stdout.write("\n")
    
 def run_tests(dir, no):
 
