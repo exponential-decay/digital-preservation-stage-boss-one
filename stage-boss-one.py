@@ -31,7 +31,7 @@ class stddev:
 class testinfo:
 
    DIR_TEXT = "%DIR%"
-   SLEEP_TIME = 10
+   CMD_SLEEP_TIME = 20
 
    #DROID paths
    sig_path = "#droid.properties#signatures#"
@@ -149,11 +149,11 @@ def write_output(text, time_list):
    
    #minutes
    add_csv_field(me/60)
-   add_csv_field(me/60)
+   add_csv_field(sd/60)
    
    sys.stdout.write("\n")
    
-def run_tests(dir, no):
+def run_tests(dir, no, start_time):
 
    ti = testinfo()
    cmd_list = ti.configure_dirs(dir)
@@ -214,13 +214,20 @@ def run_tests(dir, no):
                write_output(cmd, time_list)
                time_list = []
          
-      #give memory time to clear
-      time.sleep(ti.SLEEP_TIME)
-
+         #give memory time to clear
+         time.sleep(ti.CMD_SLEEP_TIME)
+         
+      outputtime(start_time, "Elapsed time, cmd: " + cmd)
+      
 def outputtime(start_time, text=False):
    if text:
       sys.stdout.write(text + ",")
    sys.stdout.write("%s seconds" % (time.time() - start_time) + "\n")
+
+def outputelapsed(start_time, text=False):
+   if text:
+      sys.stderr.write(text + ",")
+   sys.stderr.write("%s seconds" % (time.time() - start_time) + "\n")
 
 def main():
    #	Usage: --dir [dir to run] --no [number of runs]
@@ -246,7 +253,7 @@ def main():
       sys.exit(1)
 
    start_time = time.time()      
-   run_tests(args.dir, int(args.no))
+   run_tests(args.dir, int(args.no), start_time)
    outputtime(start_time, "Complete script execution time:")
 
 if __name__ == "__main__":      
