@@ -145,6 +145,7 @@ def run_tests(dir, no):
                      write_output("droid container output: " + profile.split("droid.properties-",1)[1], time_list)
                      time_list = []
                      
+            #get out of the loop and don't triple up...
             break
                
          elif 'droid-command-line-6.2.1.jar' in cmd and " -Nc " not in cmd:
@@ -165,12 +166,12 @@ def run_tests(dir, no):
                      command_name = cmd + " " + profile
                      write_output("droid non-container output: " + profile.split("droid.properties-",1)[1], time_list)
                      time_list = []
-            
+                     
+            #get out of the loop and don't triple up...
             break
             
          else:     
-            time_list.append(run_cmd(cmd))
-         
+            time_list.append(run_cmd(cmd))         
             if n == no:
                write_output(cmd, time_list)
                time_list = []
