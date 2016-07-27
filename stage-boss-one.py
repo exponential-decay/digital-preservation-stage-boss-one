@@ -126,9 +126,11 @@ def output_cmd_time(start_time):
 def run_cmd(cmd):
    cmd_start_time = time.time()      
    os.system(cmd)
-   return output_cmd_time(cmd_start_time)
+   runtime = output_cmd_time(cmd_start_time)
+   return runtime
 
 def add_csv_field(val):
+   val = "%.4f" % round(val,4)   #format the output, despite precition?
    sys.stdout.write(",(" + str(val) + ")")
    
 def write_output(text, time_list):
@@ -216,8 +218,9 @@ def run_tests(dir, no, start_time):
          
          #give memory time to clear
          time.sleep(ti.CMD_SLEEP_TIME)
-         
-      outputelapsed(start_time, "Elapsed time, cmd: " + cmd)
+      
+      if 'java' not in cmd:    
+         outputelapsed(start_time, "Elapsed time, cmd: " + cmd)
       
 def outputtime(start_time, text=False):
    if text:
