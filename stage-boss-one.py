@@ -183,7 +183,9 @@ def run_tests(dir, no, start_time):
                   time_list.append(run_cmd(cmd))
                   if y == no:
                      command_name = cmd + " " + profile
-                     write_output("droid container output: " + profile.split("droid.properties-",1)[1], time_list)
+                     prof_text = profile.split("droid.properties-",1)[1]
+                     write_output("droid container output: " + prof_text, time_list)
+                     outputelapsed(start_time, "Elapsed time, DROID container: " + prof_text)
                      time_list = []
                      
             #get out of the loop and don't triple up...
@@ -204,7 +206,9 @@ def run_tests(dir, no, start_time):
                   time_list.append(run_cmd(cmd))
                   if y == no:
                      command_name = cmd + " " + profile
-                     write_output("droid non-container output: " + profile.split("droid.properties-",1)[1], time_list)
+                     prof_text = profile.split("droid.properties-",1)[1]
+                     write_output("droid non-container output: " + prof_text, time_list)
+                     outputelapsed(start_time, "Elapsed time, DROID non-container: " + prof_text)
                      time_list = []
                      
             #get out of the loop and don't triple up...
