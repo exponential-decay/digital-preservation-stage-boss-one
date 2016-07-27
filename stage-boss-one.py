@@ -1,7 +1,9 @@
 import os
 import sys
 import time
+import shutil
 import argparse
+from os.path import expanduser
 
 class testinfo:
 
@@ -17,6 +19,8 @@ class testinfo:
    container_sig_file = "container-signature-20160629.xml"
 
    #DROID profiles
+   profile_home = ".droid6"
+   profile_basename = "droid.properties"
    profile_10M = "droid.properties-10MB"
    profile_65B = "droid.properties-65535"
    profile_NOLIMIT = "droid.properties-NOLIMIT"
@@ -75,15 +79,31 @@ class testinfo:
       self.droid_container = self.droid_container.replace(self.DIR_TEXT, dir) + self.nul
 
       #md5
-      self.md5.replace(self.DIR_TEXT, dir) + self.nul
+      self.md5 = self.md5.replace(self.DIR_TEXT, dir) + self.nul
       
       #sha1
-      self.sha1.replace(self.DIR_TEXT, dir) + self.nul
+      self.sha1 = self.sha1.replace(self.DIR_TEXT, dir) + self.nul
       
       return [self.sha1, self.md5, self.droid_container, self.droid_no_container, self.sf_NOLIMIT, self.sf_65B, self.sf_10M, self.sf_no_NOLIMIT, self.sf_no_65B, self.sf_no_10M]
 
-def run_cmd(cmd):
-   print "xxx"
+   def get_droid_profiles(self):
+      p0 = self.cwd + self.profile_path.replace('#', self.sep) 
+      p1 = p0 + self.profile_10M
+      p2 = p0 + self.profile_65B
+      p3 = p0 + self.profile_NOLIMIT
+      return [p1, p2, p3]
+
+   def get_droid_home(self):
+      home = expanduser("~") 
+      return str(home) + self.sep + self.profile_home + self.sep
+
+def output_cmd_time(start_time):
+   sys.stderr.write("%s" % (time.time() - start_time))
+   
+def run_cmd(cmd, mbs=False):
+   cmd_start_time = time.time()      
+   os.system(cmd)
+   output_cmd_time(cmd_start_time)
 
 def run_tests(dir, no):
 
@@ -92,11 +112,27 @@ def run_tests(dir, no):
 
    for cmd in cmd_list:
       sys.stderr.write(cmd + "\n")
-      if 'droid' in cmd and " -Nc " in cmd:
-         print "droid-container"
-      elif 'droid' in cmd and " -Nc " not in cmd:
-         print "droid-no-container"
-      os.system(cmd)
+      #set DROID profiles so we can change MAX BYTE SCAN
+      if 'droid-command-line-6.2.1.jar' in cmd and " -Nc " in cmd:
+         home = ti.get_droid_home()
+         sys.stderr.write("DROID: Working on container output." + "\n")
+         for profile in ti.get_droid_profiles():
+            droid_prof = home + ti.profile_basename
+            shutil.copy(profile, droid_prof)
+            #Then run command...
+            run_cmd(cmd,profile)
+            sys.stderr.write('\n')
+      elif 'droid-command-line-6.2.1.jar' in cmd and " -Nc " not in cmd:
+         home = ti.get_droid_home()
+         sys.stderr.write("DROID: Working on container output." + "\n")
+         for profile in ti.get_droid_profiles():
+            droid_prof = home + ti.profile_basename
+            shutil.copy(profile, droid_prof)
+            #Then run command...
+            run_cmd(cmd,profile)
+            sys.stderr.write('\n')
+      else:      
+         run_cmd(cmd)
       sys.stderr.write('\n')
 
 
@@ -115,18 +151,15 @@ def run_tests(dir, no):
 
    time.sleep(ti.SLEEP_TIME)
 
-
 def outputtime(start_time, text=False):
    if text:
       sys.stderr.write("--- " + text + " ---")
    sys.stderr.write("\n" + "--- %s seconds ---" % (time.time() - start_time) + "\n")
 
 def main():
-
    #	Usage: --dir [dir to run] --no [number of runs]
-
    #	Handle command line arguments for the script
-   parser = argparse.ArgumentParser(description='Experiment to time the intitial stages of digital preservation.')
+   parser = argparse.ArgumentParser(description='Experiment to time the intitial stages of digital preservation.\nWARNING: This will overwrite your local droid.profile file, please back it up if you do need it.')
    parser.add_argument('--dir', help='Directory of files to run the experiment over.', default=False)
    parser.add_argument('--no', help='Number of iterations to generate statistics for.', default=False)
 
