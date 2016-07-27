@@ -179,7 +179,6 @@ def run_tests(dir, no):
                #Then run command...
                for y in range(no+1):
                   time_list.append(run_cmd(cmd))
-                  sys.stderr.write("container: " + cmd + "\n")
                   if y == no:
                      command_name = cmd + " " + profile
                      write_output("droid container output: " + profile.split("droid.properties-",1)[1], time_list)
@@ -201,7 +200,6 @@ def run_tests(dir, no):
                #Then run command...
                for y in range(no+1):
                   time_list.append(run_cmd(cmd))
-                  sys.stderr.write("non-container: " + cmd + "\n")
                   if y == no:
                      command_name = cmd + " " + profile
                      write_output("droid non-container output: " + profile.split("droid.properties-",1)[1], time_list)
