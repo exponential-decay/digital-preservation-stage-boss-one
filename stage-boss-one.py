@@ -3,49 +3,69 @@ import sys
 import time
 import argparse
 
-DIR_TEXT = "%DIR%"
-SLEEP_TIME = 30
+class testinfo:
 
-sig_path = "droid.properties/signatures/"
+   DIR_TEXT = "%DIR%"
+   SLEEP_TIME = 5
 
-sig_file = "DROID_SignatureFile_V85.xml"
-container_sig_file = "container-signature-20160629.xml"
+   sig_path = "#droid.properties#signatures#"
+   sig_file = "DROID_SignatureFile_V85.xml"
+   container_sig_file = "container-signature-20160629.xml"
+   
+   #don't waste time printing to console
+   nul = "> nul"
 
-droid_no_container = 'java -Xmx1000m -jar droid-command-line-6.2.1.jar -Nr "%DIR%" -Ns "' + sig_path + sig_file + '" -R'
-droid_container = 'java -Xmx1000m -jar droid-command-line-6.2.1.jar -Nr "%DIR%" -Ns "' + sig_path + sig_file + '"-Nc "' + sig_path + container_sig_file + '" -R'
+   #paths to follow
+   container = "siegfried.sigs#container#"
+   no_container = "siegfried.sigs#no-container#"
 
-nul = "> nul"
+   def __init__(self):
+ 
+      self.sep = os.path.sep
+      if self.sep == "\\":
+         self.sep = "\\\\"
+      
+      self.cwd = os.getcwd()
+      
+      droid_no_container = 'java -Xmx1000m -jar ' + self.cwd + '#droid#droid-command-line-6.2.1.jar -Nr "%DIR%" -Ns "' + self.cwd + self.sig_path + self.sig_file + '" -R'
+      droid_container = 'java -Xmx1000m -jar #droid#droid-command-line-6.2.1.jar -Nr "%DIR%" -Ns "' + self.cwd + self.sig_path + self.sig_file + '"-Nc "' + self.cwd + self.sig_path + self.container_sig_file + '" -R'
 
-#paths to follow
-container = "siegfried.sigs/container/"
-no_container = "siegfried.sigs/no-container/"
+      self.droid_no_container = droid_no_container.replace('#', self.sep)
+      self.droid_container = droid_container.replace('#', self.sep)
 
-#sf with container identification
-sf_one = "sf -sig " + container + "NOLIMIT-1.6.1-v85-june2016-default.sig %DIR%"
-sf_two = "sf -sig " + container + "10MB-1.6.1-v85-june2016-default.sig %DIR%" 
-sf_three = "sf -sig " + container + "65535-1.6.1-v85-june2016-default.sig %DIR%"
+      #sf with container identification
+      self.sf_one = "sf -sig " + self.container + "NOLIMIT-1.6.1-v85-june2016-default.sig %DIR%"
+      self.sf_two = "sf -sig " + self.container + "10MB-1.6.1-v85-june2016-default.sig %DIR%" 
+      self.sf_three = "sf -sig " + self.container + "65535-1.6.1-v85-june2016-default.sig %DIR%"
 
-#sf without container identification
-sf_no_one = "sf -sig " + no_container + "NOLIMIT-1.6.1-v85-june2016-nocontainer-default.sig %DIR%"
-sf_no_two = "sf -sig " + no_container + "10MB-1.6.1-v85-june2016-nocontainer-default.sig %DIR%"
-sf_no_three = "sf -sig " + no_container + "65535-1.6.1-v85-june2016-nocontainer-default.sig %DIR%" 
+      #sf without container identification
+      self.sf_no_one = "sf -sig " + self.no_container + "NOLIMIT-1.6.1-v85-june2016-nocontainer-default.sig %DIR%"
+      self.sf_no_two = "sf -sig " + self.no_container + "10MB-1.6.1-v85-june2016-nocontainer-default.sig %DIR%"
+      self.sf_no_three = "sf -sig " + self.no_container + "65535-1.6.1-v85-june2016-nocontainer-default.sig %DIR%" 
 
-print java_no_container
-print java_container
-print sf_one
-print sf_two
-print sf_three
-print sf_no_one
-print sf_no_two
-print sf_no_three
+def run_tests(dir, no):
 
-def run_tests():
-   start_time = time.time()
-   os.system(sf_no_one.replace(DIR_TEXT, "-version"))
-   time.sleep(SLEEP_TIME)
-   outputtime(start_time)
+   ti = testinfo()
 
-def outputtime(start_time):
+   '''
+   ti.returncommands()  #return an array dictionary of command labels and commands
+   run each command x times
+   add each time to an array 
+   calculate mean
+   calculate standard deviation
+   output to stderr
+   run next command
+   output all results to console
+   '''
+
+   cmd = ti.droid_no_container.replace(ti.DIR_TEXT, "C:\\\\working\\\\droid-test\\\\govdocs\\\\")   
+   os.system(cmd)
+   time.sleep(ti.SLEEP_TIME)
+
+
+def outputtime(start_time, text=False):
+   if text:
+      sys.stderr.write(text)
    sys.stderr.write("\n" + "--- %s seconds ---" % (time.time() - start_time) + "\n")
 
 def main():
@@ -73,7 +93,9 @@ def main():
       sys.stderr.write("Must enter a number for iterations.")
       sys.exit(1)
 
-   run_tests()
+   start_time = time.time()      
+   run_tests(args.dir, args.no)
+   outputtime(start_time, "Complete script time:")
 
 if __name__ == "__main__":      
    main()
