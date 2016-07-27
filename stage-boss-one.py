@@ -24,7 +24,7 @@ class stddev:
       len_list = len(number_list)
       total = 0
       for li in number_list:
-         total = total + ((li-self.mean)**2)
+         total = total + math.pow((li-self.mean),2)
       total = total/len_list
       return math.sqrt(total)
 
@@ -220,7 +220,7 @@ def run_tests(dir, no):
 def outputtime(start_time, text=False):
    if text:
       sys.stdout.write(text + ",")
-   sys.stderr.write("%s seconds" % (time.time() - start_time) + "\n")
+   sys.stdout.write("%s seconds" % (time.time() - start_time) + "\n")
 
 def main():
    #	Usage: --dir [dir to run] --no [number of runs]
