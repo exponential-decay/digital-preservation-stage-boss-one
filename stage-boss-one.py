@@ -98,63 +98,90 @@ class testinfo:
       return str(home) + self.sep + self.profile_home + self.sep
 
 def output_cmd_time(start_time):
-   sys.stderr.write("%s" % (time.time() - start_time))
-   
-def run_cmd(cmd, mbs=False):
+   return (time.time() - start_time)
+  
+def run_cmd(cmd):
    cmd_start_time = time.time()      
    os.system(cmd)
-   output_cmd_time(cmd_start_time)
+   return output_cmd_time(cmd_start_time)
 
+def write_output(text, time_list):
+   time_list.pop(0)
+   sys.stdout.write(text.replace(" > nul", "") + ",")
+   new_t = []
+   for t in time_list:
+      new_t.append(str(t))
+   sys.stdout.write(','.join(new_t) + "\n")
+   
 def run_tests(dir, no):
 
    ti = testinfo()
    cmd_list = ti.configure_dirs(dir)
 
-   for cmd in cmd_list:
-      sys.stderr.write(cmd + "\n")
-      #set DROID profiles so we can change MAX BYTE SCAN
-      if 'droid-command-line-6.2.1.jar' in cmd and " -Nc " in cmd:
-         home = ti.get_droid_home()
-         sys.stderr.write("DROID: Working on container output." + "\n")
-         for profile in ti.get_droid_profiles():
-            droid_prof = home + ti.profile_basename
-            shutil.copy(profile, droid_prof)
-            #Then run command...
-            run_cmd(cmd,profile)
-            sys.stderr.write('\n')
-      elif 'droid-command-line-6.2.1.jar' in cmd and " -Nc " not in cmd:
-         home = ti.get_droid_home()
-         sys.stderr.write("DROID: Working on container output." + "\n")
-         for profile in ti.get_droid_profiles():
-            droid_prof = home + ti.profile_basename
-            shutil.copy(profile, droid_prof)
-            #Then run command...
-            run_cmd(cmd,profile)
-            sys.stderr.write('\n')
-      else:      
-         run_cmd(cmd)
-      sys.stderr.write('\n')
+   for cmd in cmd_list: 
 
+      #initiate a list of times
+      time_list = []
 
-   '''
-   ti.returncommands()  #return an array dictionary of command labels and commands
-   run each command x times
-   monitor exit status
-   add each time to an array 
-   calculate mean
-   calculate standard deviation
-   output to stderr
-   run next command
-   output all results to console
-   '''
+      for n in range(no+1):
+      
+         #set DROID profiles so we can change MAX BYTE SCAN
+         if 'droid-command-line-6.2.1.jar' in cmd and " -Nc " in cmd:
+            home = ti.get_droid_home()
+            
+            for profile in ti.get_droid_profiles():
+               droid_prof = home + ti.profile_basename
+               shutil.copy(profile, droid_prof)
+               
+               #output the profile we're using
+               time_results = []
+               
+               #Then run command...
+               for y in range(no+1):
+                  time_list.append(run_cmd(cmd))
+                  sys.stderr.write("container: " + cmd + "\n")
+                  if y == no:
+                     command_name = cmd + " " + profile
+                     write_output("droid container output: " + profile.split("droid.properties-",1)[1], time_list)
+                     time_list = []
+                     
+            break
+               
+         elif 'droid-command-line-6.2.1.jar' in cmd and " -Nc " not in cmd:
+            home = ti.get_droid_home()
 
-
-   time.sleep(ti.SLEEP_TIME)
+            for profile in ti.get_droid_profiles():
+               droid_prof = home + ti.profile_basename
+               shutil.copy(profile, droid_prof)
+               
+               #output the profile we're using
+               time_results = []         
+               
+               #Then run command...
+               for y in range(no+1):
+                  time_list.append(run_cmd(cmd))
+                  sys.stderr.write("non-container: " + cmd + "\n")
+                  if y == no:
+                     command_name = cmd + " " + profile
+                     write_output("droid non-container output: " + profile.split("droid.properties-",1)[1], time_list)
+                     time_list = []
+            
+            break
+            
+         else:     
+            time_list.append(run_cmd(cmd))
+         
+            if n == no:
+               write_output(cmd, time_list)
+               time_list = []
+         
+      #give memory time to clear
+      time.sleep(ti.SLEEP_TIME)
 
 def outputtime(start_time, text=False):
    if text:
-      sys.stderr.write("--- " + text + " ---")
-   sys.stderr.write("\n" + "--- %s seconds ---" % (time.time() - start_time) + "\n")
+      sys.stdout.write(text + ",")
+   sys.stderr.write("%s seconds" % (time.time() - start_time) + "\n")
 
 def main():
    #	Usage: --dir [dir to run] --no [number of runs]
