@@ -217,7 +217,7 @@ def run_tests(dir, no, start_time):
          #give memory time to clear
          time.sleep(ti.CMD_SLEEP_TIME)
          
-      outputtime(start_time, "Elapsed time, cmd: " + cmd)
+      outputelapsed(start_time, "Elapsed time, cmd: " + cmd)
       
 def outputtime(start_time, text=False):
    if text:
@@ -226,7 +226,7 @@ def outputtime(start_time, text=False):
 
 def outputelapsed(start_time, text=False):
    if text:
-      sys.stderr.write(text + ",")
+      sys.stderr.write(text + ": ")
    sys.stderr.write("%s seconds" % (time.time() - start_time) + "\n")
 
 def main():
