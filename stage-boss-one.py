@@ -31,7 +31,7 @@ class stddev:
 class testinfo:
 
    DIR_TEXT = "%DIR%"
-   SLEEP_TIME = 5
+   SLEEP_TIME = 10
 
    #DROID paths
    sig_path = "#droid.properties#signatures#"
