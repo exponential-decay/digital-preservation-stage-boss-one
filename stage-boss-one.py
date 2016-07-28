@@ -154,6 +154,7 @@ def write_output(text, time_list):
    add_csv_field(sd/60)
    
    sys.stdout.write("\n")
+   sys.stdout.flush()   #get a look at the results sooner
    
 def run_tests(dir, no, start_time):
 
