@@ -34,12 +34,12 @@ class testinfo:
    CMD_SLEEP_TIME = 20
 
    #DROID paths
-   sig_path = "#droid.properties#signatures#"
+   sig_path = "#droid.properties#signatures#no-profile#"
    profile_path = "#droid.properties#profiles#"
    
    #DROID signature files
-   sig_file = "DROID_SignatureFile_V85.xml"
-   container_sig_file = "container-signature-20160629.xml"
+   sig_file = "DROID_SignatureFile_V86.xml"
+   container_sig_file = "container-signature-20160727.xml"
 
    #DROID profiles
    profile_home = ".droid6"
