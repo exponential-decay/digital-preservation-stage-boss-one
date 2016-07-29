@@ -35,7 +35,7 @@ class testinfo:
 
    #DROID paths
    sig_path = "#droid.properties#signatures#no-profile#"
-   profile_path = "#droid.properties#profiles#"
+   profile_path = "#droid.properties#profiles#container#"
    
    #DROID signature files
    sig_file = "DROID_SignatureFile_V86.xml"
@@ -69,8 +69,6 @@ class testinfo:
       
       droid_no_container = 'java -Xmx1000m -jar ' + self.cwd + '#droid#droid-command-line-6.2.1.jar -Nr "%DIR%" -Ns "' + self.cwd + self.sig_path + self.sig_file + '" -R'
       droid_container = 'java -Xmx1000m -jar ' + self.cwd + '#droid#droid-command-line-6.2.1.jar -Nr "%DIR%" -Ns "' + self.cwd + self.sig_path + self.sig_file + '" -Nc "' + self.cwd + self.sig_path + self.container_sig_file + '" -R'
-
-'java -Xmx1000m -jar ' + self.cwd + '#droid#droid-command-line-6.2.1.jar -p "null" -a "%DIR%"'
 
       self.droid_no_container = droid_no_container.replace('#', self.sep)
       self.droid_container = droid_container.replace('#', self.sep)
