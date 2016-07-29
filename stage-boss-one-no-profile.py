@@ -35,7 +35,7 @@ class testinfo:
 
    #DROID paths
    sig_path = "#droid.properties#signatures#no-profile#"
-   profile_path = "#droid.properties#profiles#"
+   profile_path = "#droid.properties#profiles#container#"
    
    #DROID signature files
    sig_file = "DROID_SignatureFile_V86.xml"
