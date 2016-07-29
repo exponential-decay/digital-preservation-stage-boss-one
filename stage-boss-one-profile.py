@@ -32,10 +32,12 @@ class testinfo:
 
    DIR_TEXT = "%DIR%"
    CMD_SLEEP_TIME = 20
+   NULL_FILE = "NULL.DROID"
 
    #DROID paths
    sig_path = "#droid.properties#signatures#no-profile#"
-   profile_path = "#droid.properties#profiles#container#"
+   con_profile_path = "#droid.properties#profiles#container#"
+   no_con_profile_path = "#droid.properties#profiles#no-container#"
    
    #DROID signature files
    sig_file = "DROID_SignatureFile_V86.xml"
@@ -65,23 +67,20 @@ class testinfo:
       if self.sep == "\\":
          self.sep = "\\\\"
       
-      self.cwd = os.getcwd()
-      
-      droid_no_container = 'java -Xmx1000m -jar ' + self.cwd + '#droid#droid-command-line-6.2.1.jar -Nr "%DIR%" -Ns "' + self.cwd + self.sig_path + self.sig_file + '" -R'
-      droid_container = 'java -Xmx1000m -jar ' + self.cwd + '#droid#droid-command-line-6.2.1.jar -Nr "%DIR%" -Ns "' + self.cwd + self.sig_path + self.sig_file + '" -Nc "' + self.cwd + self.sig_path + self.container_sig_file + '" -R'
+      self.cwd = os.getcwd()     
 
-      self.droid_no_container = droid_no_container.replace('#', self.sep)
-      self.droid_container = droid_container.replace('#', self.sep)
+      droid = 'java -Xmx1000m -jar ' + self.cwd + '#droid#droid-command-line-6.2.1.jar -a "%DIR%" -R -p ' + self.NULL_FILE
+      self.droid = droid.replace('#', self.sep)
 
       #sf with container identification
-      self.sf_NOLIMIT = "sf -sig " + self.container.replace('#', self.sep) + "NOLIMIT-1.6.1-v85-june2016-default.sig %DIR%"
-      self.sf_65B = "sf -sig " + self.container.replace('#', self.sep) + "10MB-1.6.1-v85-june2016-default.sig %DIR%" 
-      self.sf_10M = "sf -sig " + self.container.replace('#', self.sep) + "65535-1.6.1-v85-june2016-default.sig %DIR%"
+      self.sf_NOLIMIT = "sf -sig " + self.container.replace('#', self.sep) + "NOLIMIT-1.6.1-v86-july2016-default.sig %DIR%"
+      self.sf_65B = "sf -sig " + self.container.replace('#', self.sep) + "10MB-1.6.1-v86-july2016-default.sig %DIR%" 
+      self.sf_10M = "sf -sig " + self.container.replace('#', self.sep) + "65535-1.6.1-v86-july2016-default.sig %DIR%"
 
       #sf without container identification
-      self.sf_no_NOLIMIT = "sf -sig " + self.no_container.replace('#', self.sep) + "NOLIMIT-1.6.1-v85-june2016-nocontainer-default.sig %DIR%"
-      self.sf_no_65B = "sf -sig " + self.no_container.replace('#', self.sep) + "10MB-1.6.1-v85-june2016-nocontainer-default.sig %DIR%"
-      self.sf_no_10M = "sf -sig " + self.no_container.replace('#', self.sep) + "65535-1.6.1-v85-june2016-nocontainer-default.sig %DIR%" 
+      self.sf_no_NOLIMIT = "sf -sig " + self.no_container.replace('#', self.sep) + "NOLIMIT-1.6.1-v86-july2016-nocontainer-default.sig %DIR%"
+      self.sf_no_65B = "sf -sig " + self.no_container.replace('#', self.sep) + "10MB-1.6.1-v86-july2016-nocontainer-default.sig %DIR%"
+      self.sf_no_10M = "sf -sig " + self.no_container.replace('#', self.sep) + "65535-1.6.1-v86-july2016-nocontainer-default.sig %DIR%" 
 
    def configure_dirs(self, dir):   
       if '\\' in dir:
@@ -98,8 +97,7 @@ class testinfo:
       self.sf_no_10M = self.sf_no_10M.replace(self.DIR_TEXT, dir) + self.nul
       
       #droid
-      self.droid_no_container = self.droid_no_container.replace(self.DIR_TEXT, dir) + self.nul
-      self.droid_container = self.droid_container.replace(self.DIR_TEXT, dir) + self.nul
+      self.droid = self.droid.replace(self.DIR_TEXT, dir) + self.nul
 
       #md5
       self.md5 = self.md5.replace(self.DIR_TEXT, dir) + self.nul
@@ -107,14 +105,18 @@ class testinfo:
       #sha1
       self.sha1 = self.sha1.replace(self.DIR_TEXT, dir) + self.nul
       
-      return [self.sha1, self.md5, self.droid_container, self.droid_no_container, self.sf_NOLIMIT, self.sf_65B, self.sf_10M, self.sf_no_NOLIMIT, self.sf_no_65B, self.sf_no_10M]
+      return [self.sha1, self.md5, self.droid, self.sf_NOLIMIT, self.sf_65B, self.sf_10M, self.sf_no_NOLIMIT, self.sf_no_65B, self.sf_no_10M]
 
    def get_droid_profiles(self):
-      p0 = self.cwd + self.profile_path.replace('#', self.sep) 
+      p0 = self.cwd + self.con_profile_path.replace('#', self.sep)      #containers
       p1 = p0 + self.profile_10M
       p2 = p0 + self.profile_65B
       p3 = p0 + self.profile_NOLIMIT
-      return [p1, p2, p3]
+      p4 = self.cwd + self.no_con_profile_path.replace('#', self.sep)   #no containers 
+      p5 = p4 + self.profile_10M
+      p6 = p4 + self.profile_65B
+      p7 = p4 + self.profile_NOLIMIT   
+      return [p1, p2, p3, p5, p6, p7]
 
    def get_droid_home(self):
       home = expanduser("~") 
@@ -169,13 +171,13 @@ def run_tests(dir, no, start_time):
       for n in range(no+1):
       
          #set DROID profiles so we can change MAX BYTE SCAN
-         if 'droid-command-line-6.2.1.jar' in cmd and " -Nc " in cmd:
+         if 'droid-command-line-6.2.1.jar' in cmd:
             home = ti.get_droid_home()
             
             for profile in ti.get_droid_profiles():
                droid_prof = home + ti.profile_basename
                shutil.copy(profile, droid_prof)
-               
+                              
                #output the profile we're using
                time_results = []
                
@@ -184,34 +186,14 @@ def run_tests(dir, no, start_time):
                   time_list.append(run_cmd(cmd))
                   if y == no:
                      command_name = cmd + " " + profile
-                     prof_text = profile.split("droid.properties-",1)[1]
+                     prof_text = profile.split("\\\\droid.properties\\\\profiles\\\\",1)[1]
                      write_output("droid container output: " + prof_text, time_list)
                      outputelapsed(start_time, "Elapsed time, DROID container: " + prof_text)
                      time_list = []
-                     
-            #get out of the loop and don't triple up...
-            break
                
-         elif 'droid-command-line-6.2.1.jar' in cmd and " -Nc " not in cmd:
-            home = ti.get_droid_home()
-
-            for profile in ti.get_droid_profiles():
-               droid_prof = home + ti.profile_basename
-               shutil.copy(profile, droid_prof)
-               
-               #output the profile we're using
-               time_results = []         
-               
-               #Then run command...
-               for y in range(no+1):
-                  time_list.append(run_cmd(cmd))
-                  if y == no:
-                     command_name = cmd + " " + profile
-                     prof_text = profile.split("droid.properties-",1)[1]
-                     write_output("droid non-container output: " + prof_text, time_list)
-                     outputelapsed(start_time, "Elapsed time, DROID non-container: " + prof_text)
-                     time_list = []
-                     
+               if os.path.exists(ti.NULL_FILE):
+                  os.remove(ti.NULL_FILE)
+      
             #get out of the loop and don't triple up...
             break
             
