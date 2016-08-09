@@ -1,0 +1,1902 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<title>DROID Analysis Results</title>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+</head>
+<body style='font-family: calibri, arial; letter-spacing: 0.5px; margin:0 auto; width: 800px; '>
+<h1>DROID Analysis Results</h1>
+<b>Analysis Version: </b>0.6.1-BETA
+</br>
+<b>Analysis File: </b>govdocs-droid-v86-20160727-container-65535
+</br>
+<b>Analysis Tool: </b>droid
+</br>
+</br>
+<b>Namespaces Used: </b>1
+</br>
+<h2>Summary Statistics</h2>
+<ul>
+<li title="Number of digital files in the accession/extract.">Total Files: 26124</li>
+<li title="The total number of archive files in the accession/extract overall. Archive files are objects that wrap together one or more files such as Zip files, GZIP files, and TAR files. Knowing an accession/extract contains these objects is important as a single archive file may contain many hundreds of other files that also need to be preserved and looked after.">Total Archive Files: 79</li>
+<li title="An aggregate total number of all files inside archive files.">Total Files Inside Archive Files: 0</li>
+<li title="A directory is a folder in the accession/extract delineating a file system hierarchy. Total directories is the total number of directories in the accession/extract overall.">Total Directories: 4654</li>
+<li title="This is used to determine the number of duplicate directory (folder) names.">Total Unique Directory Names: 4654</li>
+<li title="The number of files that are identified based on a file format signature. A file format signature is a string in binary (or hexadecimal (hex)) that uniquely identifies a file format. Note: A signature is a more mature form of a magic number that can be read across the file. A basic magic number is a unique section at the beginning of a file that can be seen when the file is looked at with an x-ray machine (the innards of a file is examined). This number could be in binary (that is numerical) or ASCII (readable text) form.">Total Identified Files (Based on Signature): 18716</li>
+<li title="This is the total number of files with uncertain file format identification. DROID will help to identify the number of potential formats.">Total Multiple Identifications (Based on Signature): 5</li>
+<li title="This is the number of files identified only by the file extension alone (e.g. there are no verifiable file format signatures in the file, only the file extension is provided). This number may represent files not identified at all (i.e.. there is no identification information in the DROID database).">Total Unidentified Files: 7408</li>
+<li title="Files that can only be identified by their extension (e.g. ".DOC" might be a Microsoft Word file, ".MP3" might be an audio file) This is a sub-set of the "Total unidentified files".">Total Extension ID Only Count: 1599</li>
+<li title="This is the total number of cases where the extension used does not match with the file signature.">Total Extension Mismatches: 1462</li>
+<li title="The total discrete file format signature identifiers in the accession/extract are used to help identify its diversity/complexity. PUID is an acronym for PRONOM Unique Identifier. PRONOM is a web-based technical registry to support digital preservation services, developed by The National Archives of the United Kingdom.">Total Discrete File Format Signature Identifiers (PUIDs) in the Accession/Extract: 152</li>
+<li title="The total number of unique file extensions identified in the accession/extract. The total unique extensions across the accession/extract are another statistic we can use to identify the diversity/complexity of the accession/extract.">Total Unique Extensions Across Accession/Extract: 61</li>
+<li title="Zero byte files have no binary content. They may have been created with the intention of turning into a record, e.g. a document, but they may also be indicative of a process that has corrupted the file such as a faulty extract. Zero-byte files may have a filename and extension but will have zero size.">Total Zero-byte Files in Accession/Extract: 0</li>
+<li title="Number of filenames that contain more than one space in a row, these filenames may cause some problems with some systems and may require pre-conditioning.">Total Files with Multiple Contiguous Space Characters: 0</li>
+<li title="Percentage of files with formats that are positively identified by DROID, pending other processes such as format validation, this percentage may be indicative of how much of the accession/extract will need little or no intervention to ingest cleanly.">Percentage of Accession/Extract Identified: 71.6</li>
+<li title="Percentage of files with formats that were not able to be identified by DROID, which could be due to a signature not being in the PRONOM database yet, the file being corrupt, a signature and extension mismatch or another reason. This percentage is indicative of how much work will be involved in processing the accession/extract.">Percentage of Accession/Extract Unidentified: 28.4</li>
+<li title="Count of all the files that have zero identification results across all namespaces utilizing binary and container file format signatures. As such this statisticate may indicate an immediate priority for digital preservation researchers, and therfore may be indicative of the amount of work needed to understand an accession/extract.">Files Left Unidentified Across Multiple Identifiers (Gaps Based on Signature): 12031</li>
+</ul>
+</br>
+<hr/>
+<h2>Size of the accession/extract: </h2>
+<details><summary>More Detail:</br></summary></br>The size of the accession/extract is represented using two values, bytes (a byte equals eight binary bits) from the DROID export and conversion from bytes into megabytes for understanding the size of larger accessions/extracts. We will use this statistic to understand how much storage is required for this accession/extract when ingested.</br></details>
+</br>
+33772327760.0 bytes | 32207.8 MiB/MB (Megabytes)
+</br>
+</br>
+<hr/>
+<h2>Frequency of File Format Signature Identified IDs: </h2>
+<details><summary>More Detail:</br></summary></br>A chart used to provide a clear visualization of the distribution of file formats across the accession/extract. A file format signature is a string in binary (or hexadecimal (hex)) that uniquely identifies a file format. PUID is an acronym for PRONOM Unique Identifier. PRONOM is a web-based technical registry to support digital preservation services, developed by The National Archives of the United Kingdom.Other identifiers listed may come from Freedesktop.org's MIMEInfo Database or Apache's Tika equivalent. Count and visualization of how many times each format is represented in the accession/extract, in a descending list from most frequent to least.</br></details>
+</br>
+<table>
+<table><th style="text-align: left;">ID</th><th style="text-align: left;">Count</th><th style="text-align: left;">Volume</th>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/18">fmt/18</a>
+</td><td style="width: 100px;">3891</td>
+<td><meter style="width: 300px;" value="3891" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/17">fmt/17</a>
+</td><td style="width: 100px;">3556</td>
+<td><meter style="width: 300px;" value="3556" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/20">fmt/20</a>
+</td><td style="width: 100px;">2313</td>
+<td><meter style="width: 300px;" value="2313" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/16">fmt/16</a>
+</td><td style="width: 100px;">2216</td>
+<td><meter style="width: 300px;" value="2216" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/19">fmt/19</a>
+</td><td style="width: 100px;">2039</td>
+<td><meter style="width: 300px;" value="2039" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/9">x-fmt/9</a>
+</td><td style="width: 100px;">711</td>
+<td><meter style="width: 300px;" value="711" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/15">fmt/15</a>
+</td><td style="width: 100px;">588</td>
+<td><meter style="width: 300px;" value="588" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/40">fmt/40</a>
+</td><td style="width: 100px;">367</td>
+<td><meter style="width: 300px;" value="367" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/96">fmt/96</a>
+</td><td style="width: 100px;">319</td>
+<td><meter style="width: 300px;" value="319" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/126">fmt/126</a>
+</td><td style="width: 100px;">255</td>
+<td><meter style="width: 300px;" value="255" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/276">fmt/276</a>
+</td><td style="width: 100px;">185</td>
+<td><meter style="width: 300px;" value="185" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/101">fmt/101</a>
+</td><td style="width: 100px;">177</td>
+<td><meter style="width: 300px;" value="177" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/100">fmt/100</a>
+</td><td style="width: 100px;">135</td>
+<td><meter style="width: 300px;" value="135" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/61">fmt/61</a>
+</td><td style="width: 100px;">113</td>
+<td><meter style="width: 300px;" value="113" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/14">fmt/14</a>
+</td><td style="width: 100px;">108</td>
+<td><meter style="width: 300px;" value="108" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/4">fmt/4</a>
+</td><td style="width: 100px;">101</td>
+<td><meter style="width: 300px;" value="101" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/111">fmt/111</a>
+</td><td style="width: 100px;">80</td>
+<td><meter style="width: 300px;" value="80" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/44">fmt/44</a>
+</td><td style="width: 100px;">74</td>
+<td><meter style="width: 300px;" value="74" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/39">fmt/39</a>
+</td><td style="width: 100px;">63</td>
+<td><meter style="width: 300px;" value="63" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/950">fmt/950</a>
+</td><td style="width: 100px;">61</td>
+<td><meter style="width: 300px;" value="61" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/583">fmt/583</a>
+</td><td style="width: 100px;">55</td>
+<td><meter style="width: 300px;" value="55" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/215">fmt/215</a>
+</td><td style="width: 100px;">55</td>
+<td><meter style="width: 300px;" value="55" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/50">fmt/50</a>
+</td><td style="width: 100px;">52</td>
+<td><meter style="width: 300px;" value="52" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/11">fmt/11</a>
+</td><td style="width: 100px;">48</td>
+<td><meter style="width: 300px;" value="48" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/266">x-fmt/266</a>
+</td><td style="width: 100px;">45</td>
+<td><meter style="width: 300px;" value="45" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/406">x-fmt/406</a>
+</td><td style="width: 100px;">43</td>
+<td><meter style="width: 300px;" value="43" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/408">x-fmt/408</a>
+</td><td style="width: 100px;">40</td>
+<td><meter style="width: 300px;" value="40" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/124">fmt/124</a>
+</td><td style="width: 100px;">38</td>
+<td><meter style="width: 300px;" value="38" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/3">fmt/3</a>
+</td><td style="width: 100px;">37</td>
+<td><meter style="width: 300px;" value="37" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/263">x-fmt/263</a>
+</td><td style="width: 100px;">33</td>
+<td><meter style="width: 300px;" value="33" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/102">fmt/102</a>
+</td><td style="width: 100px;">30</td>
+<td><meter style="width: 300px;" value="30" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/383">x-fmt/383</a>
+</td><td style="width: 100px;">28</td>
+<td><meter style="width: 300px;" value="28" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/45">fmt/45</a>
+</td><td style="width: 100px;">27</td>
+<td><meter style="width: 300px;" value="27" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/43">fmt/43</a>
+</td><td style="width: 100px;">26</td>
+<td><meter style="width: 300px;" value="26" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/122">fmt/122</a>
+</td><td style="width: 100px;">26</td>
+<td><meter style="width: 300px;" value="26" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/116">fmt/116</a>
+</td><td style="width: 100px;">25</td>
+<td><meter style="width: 300px;" value="25" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/412">fmt/412</a>
+</td><td style="width: 100px;">24</td>
+<td><meter style="width: 300px;" value="24" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/109">fmt/109</a>
+</td><td style="width: 100px;">23</td>
+<td><meter style="width: 300px;" value="23" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/244">fmt/244</a>
+</td><td style="width: 100px;">22</td>
+<td><meter style="width: 300px;" value="22" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/123">fmt/123</a>
+</td><td style="width: 100px;">22</td>
+<td><meter style="width: 300px;" value="22" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/394">x-fmt/394</a>
+</td><td style="width: 100px;">21</td>
+<td><meter style="width: 300px;" value="21" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/41">fmt/41</a>
+</td><td style="width: 100px;">21</td>
+<td><meter style="width: 300px;" value="21" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/505">fmt/505</a>
+</td><td style="width: 100px;">20</td>
+<td><meter style="width: 300px;" value="20" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/107">fmt/107</a>
+</td><td style="width: 100px;">20</td>
+<td><meter style="width: 300px;" value="20" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/110">fmt/110</a>
+</td><td style="width: 100px;">19</td>
+<td><meter style="width: 300px;" value="19" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/53">fmt/53</a>
+</td><td style="width: 100px;">18</td>
+<td><meter style="width: 300px;" value="18" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/214">fmt/214</a>
+</td><td style="width: 100px;">18</td>
+<td><meter style="width: 300px;" value="18" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/44">x-fmt/44</a>
+</td><td style="width: 100px;">17</td>
+<td><meter style="width: 300px;" value="17" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/506">fmt/506</a>
+</td><td style="width: 100px;">17</td>
+<td><meter style="width: 300px;" value="17" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/288">fmt/288</a>
+</td><td style="width: 100px;">16</td>
+<td><meter style="width: 300px;" value="16" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/274">x-fmt/274</a>
+</td><td style="width: 100px;">15</td>
+<td><meter style="width: 300px;" value="15" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/558">fmt/558</a>
+</td><td style="width: 100px;">15</td>
+<td><meter style="width: 300px;" value="15" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/280">x-fmt/280</a>
+</td><td style="width: 100px;">14</td>
+<td><meter style="width: 300px;" value="14" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/65">x-fmt/65</a>
+</td><td style="width: 100px;">13</td>
+<td><meter style="width: 300px;" value="13" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/99">fmt/99</a>
+</td><td style="width: 100px;">13</td>
+<td><meter style="width: 300px;" value="13" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/97">fmt/97</a>
+</td><td style="width: 100px;">13</td>
+<td><meter style="width: 300px;" value="13" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/88">x-fmt/88</a>
+</td><td style="width: 100px;">12</td>
+<td><meter style="width: 300px;" value="12" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/38">fmt/38</a>
+</td><td style="width: 100px;">12</td>
+<td><meter style="width: 300px;" value="12" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/353">fmt/353</a>
+</td><td style="width: 100px;">12</td>
+<td><meter style="width: 300px;" value="12" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/57">fmt/57</a>
+</td><td style="width: 100px;">11</td>
+<td><meter style="width: 300px;" value="11" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/52">fmt/52</a>
+</td><td style="width: 100px;">11</td>
+<td><meter style="width: 300px;" value="11" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/49">x-fmt/49</a>
+</td><td style="width: 100px;">10</td>
+<td><meter style="width: 300px;" value="10" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/94">fmt/94</a>
+</td><td style="width: 100px;">10</td>
+<td><meter style="width: 300px;" value="10" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/609">fmt/609</a>
+</td><td style="width: 100px;">10</td>
+<td><meter style="width: 300px;" value="10" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/56">fmt/56</a>
+</td><td style="width: 100px;">10</td>
+<td><meter style="width: 300px;" value="10" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/42">fmt/42</a>
+</td><td style="width: 100px;">10</td>
+<td><meter style="width: 300px;" value="10" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/37">fmt/37</a>
+</td><td style="width: 100px;">10</td>
+<td><meter style="width: 300px;" value="10" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/108">fmt/108</a>
+</td><td style="width: 100px;">10</td>
+<td><meter style="width: 300px;" value="10" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/104">fmt/104</a>
+</td><td style="width: 100px;">10</td>
+<td><meter style="width: 300px;" value="10" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/275">x-fmt/275</a>
+</td><td style="width: 100px;">9</td>
+<td><meter style="width: 300px;" value="9" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/226">x-fmt/226</a>
+</td><td style="width: 100px;">9</td>
+<td><meter style="width: 300px;" value="9" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/62">fmt/62</a>
+</td><td style="width: 100px;">9</td>
+<td><meter style="width: 300px;" value="9" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/59">fmt/59</a>
+</td><td style="width: 100px;">9</td>
+<td><meter style="width: 300px;" value="9" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/55">fmt/55</a>
+</td><td style="width: 100px;">9</td>
+<td><meter style="width: 300px;" value="9" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/503">fmt/503</a>
+</td><td style="width: 100px;">9</td>
+<td><meter style="width: 300px;" value="9" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/559">fmt/559</a>
+</td><td style="width: 100px;">8</td>
+<td><meter style="width: 300px;" value="8" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/390">x-fmt/390</a>
+</td><td style="width: 100px;">7</td>
+<td><meter style="width: 300px;" value="7" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/207">x-fmt/207</a>
+</td><td style="width: 100px;">7</td>
+<td><meter style="width: 300px;" value="7" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/114">x-fmt/114</a>
+</td><td style="width: 100px;">7</td>
+<td><meter style="width: 300px;" value="7" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/507">fmt/507</a>
+</td><td style="width: 100px;">7</td>
+<td><meter style="width: 300px;" value="7" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/106">fmt/106</a>
+</td><td style="width: 100px;">7</td>
+<td><meter style="width: 300px;" value="7" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/115">x-fmt/115</a>
+</td><td style="width: 100px;">6</td>
+<td><meter style="width: 300px;" value="6" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/423">fmt/423</a>
+</td><td style="width: 100px;">6</td>
+<td><meter style="width: 300px;" value="6" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/420">fmt/420</a>
+</td><td style="width: 100px;">6</td>
+<td><meter style="width: 300px;" value="6" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/329">fmt/329</a>
+</td><td style="width: 100px;">6</td>
+<td><meter style="width: 300px;" value="6" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/133">fmt/133</a>
+</td><td style="width: 100px;">6</td>
+<td><meter style="width: 300px;" value="6" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/391">x-fmt/391</a>
+</td><td style="width: 100px;">5</td>
+<td><meter style="width: 300px;" value="5" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/560">fmt/560</a>
+</td><td style="width: 100px;">5</td>
+<td><meter style="width: 300px;" value="5" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/557">fmt/557</a>
+</td><td style="width: 100px;">5</td>
+<td><meter style="width: 300px;" value="5" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/422">fmt/422</a>
+</td><td style="width: 100px;">5</td>
+<td><meter style="width: 300px;" value="5" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/428">x-fmt/428</a>
+</td><td style="width: 100px;">4</td>
+<td><meter style="width: 300px;" value="4" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/416">x-fmt/416</a>
+</td><td style="width: 100px;">4</td>
+<td><meter style="width: 300px;" value="4" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/931">fmt/931</a>
+</td><td style="width: 100px;">4</td>
+<td><meter style="width: 300px;" value="4" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/561">fmt/561</a>
+</td><td style="width: 100px;">4</td>
+<td><meter style="width: 300px;" value="4" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/535">fmt/535</a>
+</td><td style="width: 100px;">4</td>
+<td><meter style="width: 300px;" value="4" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/534">fmt/534</a>
+</td><td style="width: 100px;">4</td>
+<td><meter style="width: 300px;" value="4" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/473">fmt/473</a>
+</td><td style="width: 100px;">4</td>
+<td><meter style="width: 300px;" value="4" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/388">fmt/388</a>
+</td><td style="width: 100px;">4</td>
+<td><meter style="width: 300px;" value="4" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/354">fmt/354</a>
+</td><td style="width: 100px;">4</td>
+<td><meter style="width: 300px;" value="4" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/420">x-fmt/420</a>
+</td><td style="width: 100px;">3</td>
+<td><meter style="width: 300px;" value="3" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/235">x-fmt/235</a>
+</td><td style="width: 100px;">3</td>
+<td><meter style="width: 300px;" value="3" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/75">fmt/75</a>
+</td><td style="width: 100px;">3</td>
+<td><meter style="width: 300px;" value="3" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/724">fmt/724</a>
+</td><td style="width: 100px;">3</td>
+<td><meter style="width: 300px;" value="3" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/92">x-fmt/92</a>
+</td><td style="width: 100px;">2</td>
+<td><meter style="width: 300px;" value="2" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/45">x-fmt/45</a>
+</td><td style="width: 100px;">2</td>
+<td><meter style="width: 300px;" value="2" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/117">x-fmt/117</a>
+</td><td style="width: 100px;">2</td>
+<td><meter style="width: 300px;" value="2" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/98">fmt/98</a>
+</td><td style="width: 100px;">2</td>
+<td><meter style="width: 300px;" value="2" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/833">fmt/833</a>
+</td><td style="width: 100px;">2</td>
+<td><meter style="width: 300px;" value="2" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/78">fmt/78</a>
+</td><td style="width: 100px;">2</td>
+<td><meter style="width: 300px;" value="2" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/77">fmt/77</a>
+</td><td style="width: 100px;">2</td>
+<td><meter style="width: 300px;" value="2" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/63">fmt/63</a>
+</td><td style="width: 100px;">2</td>
+<td><meter style="width: 300px;" value="2" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/537">fmt/537</a>
+</td><td style="width: 100px;">2</td>
+<td><meter style="width: 300px;" value="2" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/418">fmt/418</a>
+</td><td style="width: 100px;">2</td>
+<td><meter style="width: 300px;" value="2" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/390">fmt/390</a>
+</td><td style="width: 100px;">2</td>
+<td><meter style="width: 300px;" value="2" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/32">fmt/32</a>
+</td><td style="width: 100px;">2</td>
+<td><meter style="width: 300px;" value="2" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/280">fmt/280</a>
+</td><td style="width: 100px;">2</td>
+<td><meter style="width: 300px;" value="2" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/136">fmt/136</a>
+</td><td style="width: 100px;">2</td>
+<td><meter style="width: 300px;" value="2" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/91">x-fmt/91</a>
+</td><td style="width: 100px;">1</td>
+<td><meter style="width: 300px;" value="1" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/8">x-fmt/8</a>
+</td><td style="width: 100px;">1</td>
+<td><meter style="width: 300px;" value="1" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/64">x-fmt/64</a>
+</td><td style="width: 100px;">1</td>
+<td><meter style="width: 300px;" value="1" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/429">x-fmt/429</a>
+</td><td style="width: 100px;">1</td>
+<td><meter style="width: 300px;" value="1" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/367">x-fmt/367</a>
+</td><td style="width: 100px;">1</td>
+<td><meter style="width: 300px;" value="1" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/268">x-fmt/268</a>
+</td><td style="width: 100px;">1</td>
+<td><meter style="width: 300px;" value="1" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/257">x-fmt/257</a>
+</td><td style="width: 100px;">1</td>
+<td><meter style="width: 300px;" value="1" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/219">x-fmt/219</a>
+</td><td style="width: 100px;">1</td>
+<td><meter style="width: 300px;" value="1" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/119">x-fmt/119</a>
+</td><td style="width: 100px;">1</td>
+<td><meter style="width: 300px;" value="1" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/76">fmt/76</a>
+</td><td style="width: 100px;">1</td>
+<td><meter style="width: 300px;" value="1" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/688">fmt/688</a>
+</td><td style="width: 100px;">1</td>
+<td><meter style="width: 300px;" value="1" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/682">fmt/682</a>
+</td><td style="width: 100px;">1</td>
+<td><meter style="width: 300px;" value="1" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/657">fmt/657</a>
+</td><td style="width: 100px;">1</td>
+<td><meter style="width: 300px;" value="1" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/645">fmt/645</a>
+</td><td style="width: 100px;">1</td>
+<td><meter style="width: 300px;" value="1" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/629">fmt/629</a>
+</td><td style="width: 100px;">1</td>
+<td><meter style="width: 300px;" value="1" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/611">fmt/611</a>
+</td><td style="width: 100px;">1</td>
+<td><meter style="width: 300px;" value="1" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/584">fmt/584</a>
+</td><td style="width: 100px;">1</td>
+<td><meter style="width: 300px;" value="1" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/58">fmt/58</a>
+</td><td style="width: 100px;">1</td>
+<td><meter style="width: 300px;" value="1" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/533">fmt/533</a>
+</td><td style="width: 100px;">1</td>
+<td><meter style="width: 300px;" value="1" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/523">fmt/523</a>
+</td><td style="width: 100px;">1</td>
+<td><meter style="width: 300px;" value="1" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/501">fmt/501</a>
+</td><td style="width: 100px;">1</td>
+<td><meter style="width: 300px;" value="1" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/487">fmt/487</a>
+</td><td style="width: 100px;">1</td>
+<td><meter style="width: 300px;" value="1" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/468">fmt/468</a>
+</td><td style="width: 100px;">1</td>
+<td><meter style="width: 300px;" value="1" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/417">fmt/417</a>
+</td><td style="width: 100px;">1</td>
+<td><meter style="width: 300px;" value="1" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/396">fmt/396</a>
+</td><td style="width: 100px;">1</td>
+<td><meter style="width: 300px;" value="1" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/372">fmt/372</a>
+</td><td style="width: 100px;">1</td>
+<td><meter style="width: 300px;" value="1" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/341">fmt/341</a>
+</td><td style="width: 100px;">1</td>
+<td><meter style="width: 300px;" value="1" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/34">fmt/34</a>
+</td><td style="width: 100px;">1</td>
+<td><meter style="width: 300px;" value="1" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/328">fmt/328</a>
+</td><td style="width: 100px;">1</td>
+<td><meter style="width: 300px;" value="1" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/284">fmt/284</a>
+</td><td style="width: 100px;">1</td>
+<td><meter style="width: 300px;" value="1" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/281">fmt/281</a>
+</td><td style="width: 100px;">1</td>
+<td><meter style="width: 300px;" value="1" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/190">fmt/190</a>
+</td><td style="width: 100px;">1</td>
+<td><meter style="width: 300px;" value="1" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/185">fmt/185</a>
+</td><td style="width: 100px;">1</td>
+<td><meter style="width: 300px;" value="1" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+<tr><td style="width: 220px;">
+<a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/132">fmt/132</a>
+</td><td style="width: 100px;">1</td>
+<td><meter style="width: 300px;" value="1" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+</table>
+</br>
+<hr/>
+<h2>Date Range of Items in the Accession/Extract: </h2>
+<details><summary>More Detail:</br></summary></br>Count and visualization giving a clear illustration of the distribution of file modification dates across the accession/extract. The list is in descending order based on the number of files last modified on any given year. Too small or too recent a date range may indicate file transfer errors depending on the source of files.</br></details>
+</br>
+<table>
+<table><th style="text-align: left;">Volume</a></th><th style="text-align: left;">Count</th>
+<tr><td style="width: 100px;">
+<a target="_blank" href="https://en.wikipedia.org/wiki/2012">2012</a>
+</td><td>26124</td>
+<td><meter style="width: 300px;" value="26124" min="<built-in function min>" max="26124">test</meter></td>
+</tr>
+</table>
+</br>
+<hr/>
+<h2>Aggregated File Format Signature Identifiers in Accession/Extract: </h2>
+<details><summary>More Detail:</br></summary></br>A list of ID values and format names to provide a clear picture of diversity/complexity of the accession/extract. PUID is an acronym for PRONOM Unique Identifier. PRONOM is a web-based technical registry to support digital preservation services, developed by The National Archives of the United Kingdom. Other identifiers listed may come from Freedesktop.org's MIMEInfo Database or Apache's Tika equivalent.</br></details>
+</br>
+<table>
+<table><th style="text-align: left;">ID</th><th style="text-align: left;">Namespace</th><th style="text-align: left;">Format Name</th><th style="text-align: left;">Count</th>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/92">x-fmt/92</a></td><td style="width: 150px;">ns:pronom</td><td>Adobe Photoshop</td><td style="text-align:center">2</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/91">x-fmt/91</a></td><td style="width: 150px;">ns:pronom</td><td>Postscript, 1.0</td><td style="text-align:center">1</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/9">x-fmt/9</a></td><td style="width: 150px;">ns:pronom</td><td>dBASE Database, III</td><td style="text-align:center">711</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/88">x-fmt/88</a></td><td style="width: 150px;">ns:pronom</td><td>Microsoft Powerpoint Presentation, 4.0</td><td style="text-align:center">12</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/8">x-fmt/8</a></td><td style="width: 150px;">ns:pronom</td><td>dBASE Database, II</td><td style="text-align:center">1</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/65">x-fmt/65</a></td><td style="width: 150px;">ns:pronom</td><td>Microsoft Word for Macintosh Document, 5.0</td><td style="text-align:center">13</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/64">x-fmt/64</a></td><td style="width: 150px;">ns:pronom</td><td>Microsoft Word for Macintosh Document, 4.0</td><td style="text-align:center">1</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/49">x-fmt/49</a></td><td style="width: 150px;">ns:pronom</td><td>AutoCAD Design Web Format, 6.0</td><td style="text-align:center">10</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/45">x-fmt/45</a></td><td style="width: 150px;">ns:pronom</td><td>Microsoft Word Document Template, 97-2003</td><td style="text-align:center">2</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/44">x-fmt/44</a></td><td style="width: 150px;">ns:pronom</td><td>WordPerfect for MS-DOS/Windows Document, 6.0</td><td style="text-align:center">17</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/429">x-fmt/429</a></td><td style="width: 150px;">ns:pronom</td><td>Microsoft Web Archive</td><td style="text-align:center">1</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/428">x-fmt/428</a></td><td style="width: 150px;">ns:pronom</td><td>Microsoft Windows Shortcut</td><td style="text-align:center">4</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/420">x-fmt/420</a></td><td style="width: 150px;">ns:pronom</td><td>Windows Setup File</td><td style="text-align:center">3</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/416">x-fmt/416</a></td><td style="width: 150px;">ns:pronom</td><td>BinHex Binary Text</td><td style="text-align:center">4</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/408">x-fmt/408</a></td><td style="width: 150px;">ns:pronom</td><td>PostScript, 3.0</td><td style="text-align:center">40</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/406">x-fmt/406</a></td><td style="width: 150px;">ns:pronom</td><td>PostScript, 2.0</td><td style="text-align:center">43</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/394">x-fmt/394</a></td><td style="width: 150px;">ns:pronom</td><td>WordPerfect for MS-DOS/Windows Document, 5.1</td><td style="text-align:center">21</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/391">x-fmt/391</a></td><td style="width: 150px;">ns:pronom</td><td>Exchangeable Image File Format (Compressed), 2.2</td><td style="text-align:center">5</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/390">x-fmt/390</a></td><td style="width: 150px;">ns:pronom</td><td>Exchangeable Image File Format (Compressed), 2.1</td><td style="text-align:center">7</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/383">x-fmt/383</a></td><td style="width: 150px;">ns:pronom</td><td>Flexible Image Transport System</td><td style="text-align:center">28</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/367">x-fmt/367</a></td><td style="width: 150px;">ns:pronom</td><td>Truevision TGA Bitmap, 1.0</td><td style="text-align:center">1</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/280">x-fmt/280</a></td><td style="width: 150px;">ns:pronom</td><td>XML Schema Definition</td><td style="text-align:center">14</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/275">x-fmt/275</a></td><td style="width: 150px;">ns:pronom</td><td>Microsoft Word for MS-DOS Document, 5.0</td><td style="text-align:center">9</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/274">x-fmt/274</a></td><td style="width: 150px;">ns:pronom</td><td>Microsoft Word for MS-DOS Document, 4.0</td><td style="text-align:center">15</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/268">x-fmt/268</a></td><td style="width: 150px;">ns:pronom</td><td>BZIP2 Compressed Archive</td><td style="text-align:center">1</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/266">x-fmt/266</a></td><td style="width: 150px;">ns:pronom</td><td>GZIP Format</td><td style="text-align:center">45</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/263">x-fmt/263</a></td><td style="width: 150px;">ns:pronom</td><td>ZIP Format</td><td style="text-align:center">33</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/257">x-fmt/257</a></td><td style="width: 150px;">ns:pronom</td><td>Microsoft Publisher, 2002</td><td style="text-align:center">1</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/235">x-fmt/235</a></td><td style="width: 150px;">ns:pronom</td><td>ESRI Arc/View ShapeFile</td><td style="text-align:center">3</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/226">x-fmt/226</a></td><td style="width: 150px;">ns:pronom</td><td>ESRI Arc/Info Export File</td><td style="text-align:center">9</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/219">x-fmt/219</a></td><td style="width: 150px;">ns:pronom</td><td>Internet Archive, 1.0</td><td style="text-align:center">1</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/207">x-fmt/207</a></td><td style="width: 150px;">ns:pronom</td><td>X-Windows Bitmap Image, X11</td><td style="text-align:center">7</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/119">x-fmt/119</a></td><td style="width: 150px;">ns:pronom</td><td>Windows Metafile Image</td><td style="text-align:center">1</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/117">x-fmt/117</a></td><td style="width: 150px;">ns:pronom</td><td>Lotus 1-2-3 Worksheet, 1.0</td><td style="text-align:center">2</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/115">x-fmt/115</a></td><td style="width: 150px;">ns:pronom</td><td>Lotus 1-2-3 Worksheet, 3.0</td><td style="text-align:center">6</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/x-fmt/114">x-fmt/114</a></td><td style="width: 150px;">ns:pronom</td><td>Lotus 1-2-3 Worksheet, 2.0</td><td style="text-align:center">7</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/99">fmt/99</a></td><td style="width: 150px;">ns:pronom</td><td>Hypertext Markup Language, 4.0</td><td style="text-align:center">13</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/98">fmt/98</a></td><td style="width: 150px;">ns:pronom</td><td>Hypertext Markup Language, 3.2</td><td style="text-align:center">2</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/97">fmt/97</a></td><td style="width: 150px;">ns:pronom</td><td>Hypertext Markup Language, 2.0</td><td style="text-align:center">13</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/96">fmt/96</a></td><td style="width: 150px;">ns:pronom</td><td>Hypertext Markup Language</td><td style="text-align:center">319</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/950">fmt/950</a></td><td style="width: 150px;">ns:pronom</td><td>MIME Email, 1.0</td><td style="text-align:center">61</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/94">fmt/94</a></td><td style="width: 150px;">ns:pronom</td><td>Virtual Reality Modeling Language, 2.0</td><td style="text-align:center">10</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/931">fmt/931</a></td><td style="width: 150px;">ns:pronom</td><td>Mathcad Document, Binary</td><td style="text-align:center">4</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/833">fmt/833</a></td><td style="width: 150px;">ns:pronom</td><td>Open Inventor File Format, 2.x</td><td style="text-align:center">2</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/78">fmt/78</a></td><td style="width: 150px;">ns:pronom</td><td>Drawing Interchange File Format (ASCII), 2000-2002</td><td style="text-align:center">2</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/77">fmt/77</a></td><td style="width: 150px;">ns:pronom</td><td>Drawing Interchange File Format (ASCII), R14</td><td style="text-align:center">2</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/76">fmt/76</a></td><td style="width: 150px;">ns:pronom</td><td>Drawing Interchange File Format (ASCII), R13</td><td style="text-align:center">1</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/75">fmt/75</a></td><td style="width: 150px;">ns:pronom</td><td>Drawing Interchange File Format (ASCII), R11/12</td><td style="text-align:center">3</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/724">fmt/724</a></td><td style="width: 150px;">ns:pronom</td><td>Keyhole Markup Language (Container)</td><td style="text-align:center">3</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/688">fmt/688</a></td><td style="width: 150px;">ns:pronom</td><td>Executable and Linkable Format, 32bit Little Endian</td><td style="text-align:center">1</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/682">fmt/682</a></td><td style="width: 150px;">ns:pronom</td><td>Thumbs DB file, XP</td><td style="text-align:center">1</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/657">fmt/657</a></td><td style="width: 150px;">ns:pronom</td><td>Open XML Paper Specification</td><td style="text-align:center">1</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/645">fmt/645</a></td><td style="width: 150px;">ns:pronom</td><td>Exchangeable Image File Format (Compressed), 2.2.1</td><td style="text-align:center">1</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/63">fmt/63</a></td><td style="width: 150px;">ns:pronom</td><td>Drawing Interchange File Format (ASCII), Generic</td><td style="text-align:center">2</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/629">fmt/629</a></td><td style="width: 150px;">ns:pronom</td><td>Microsoft PowerPoint Show, 2007</td><td style="text-align:center">1</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/62">fmt/62</a></td><td style="width: 150px;">ns:pronom</td><td>Microsoft Excel 2000-2003 Workbook (xls), 8X</td><td style="text-align:center">9</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/611">fmt/611</a></td><td style="width: 150px;">ns:pronom</td><td>LDAP Data Interchange Format</td><td style="text-align:center">1</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/61">fmt/61</a></td><td style="width: 150px;">ns:pronom</td><td>Microsoft Excel 97 Workbook (xls), 8</td><td style="text-align:center">113</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/609">fmt/609</a></td><td style="width: 150px;">ns:pronom</td><td>Microsoft Word (Generic), 6.0-2003</td><td style="text-align:center">10</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/59">fmt/59</a></td><td style="width: 150px;">ns:pronom</td><td>Microsoft Excel 5.0/95 Workbook (xls), 5/95</td><td style="text-align:center">9</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/584">fmt/584</a></td><td style="width: 150px;">ns:pronom</td><td>Windows Media Metafile</td><td style="text-align:center">1</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/583">fmt/583</a></td><td style="width: 150px;">ns:pronom</td><td>Vector Markup Language</td><td style="text-align:center">55</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/58">fmt/58</a></td><td style="width: 150px;">ns:pronom</td><td>Microsoft Excel 4.0 Workbook (xls), 4W</td><td style="text-align:center">1</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/57">fmt/57</a></td><td style="width: 150px;">ns:pronom</td><td>Microsoft Excel 4.0 Worksheet (xls), 4S</td><td style="text-align:center">11</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/561">fmt/561</a></td><td style="width: 150px;">ns:pronom</td><td>Adobe Illustrator, 12.0</td><td style="text-align:center">4</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/560">fmt/560</a></td><td style="width: 150px;">ns:pronom</td><td>Adobe Illustrator, 11.0</td><td style="text-align:center">5</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/56">fmt/56</a></td><td style="width: 150px;">ns:pronom</td><td>Microsoft Excel 3.0 Worksheet (xls), 3</td><td style="text-align:center">10</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/559">fmt/559</a></td><td style="width: 150px;">ns:pronom</td><td>Adobe Illustrator, 10.0</td><td style="text-align:center">8</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/558">fmt/558</a></td><td style="width: 150px;">ns:pronom</td><td>Adobe Illustrator, 9.0</td><td style="text-align:center">15</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/557">fmt/557</a></td><td style="width: 150px;">ns:pronom</td><td>Adobe Illustrator, 8.0</td><td style="text-align:center">5</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/55">fmt/55</a></td><td style="width: 150px;">ns:pronom</td><td>Microsoft Excel 2.x Worksheet (xls), 2</td><td style="text-align:center">9</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/537">fmt/537</a></td><td style="width: 150px;">ns:pronom</td><td>Adobe FrameMaker Document, 6.0</td><td style="text-align:center">2</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/535">fmt/535</a></td><td style="width: 150px;">ns:pronom</td><td>Adobe FrameMaker Document, 4.0</td><td style="text-align:center">4</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/534">fmt/534</a></td><td style="width: 150px;">ns:pronom</td><td>Adobe FrameMaker Document, 3.0</td><td style="text-align:center">4</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/533">fmt/533</a></td><td style="width: 150px;">ns:pronom</td><td>Adobe FrameMaker Document, 2.0</td><td style="text-align:center">1</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/53">fmt/53</a></td><td style="width: 150px;">ns:pronom</td><td>Rich Text Format, 1.8</td><td style="text-align:center">18</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/523">fmt/523</a></td><td style="width: 150px;">ns:pronom</td><td>Macro enabled Microsoft Word Document OOXML, 2007 Onwards</td><td style="text-align:center">1</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/52">fmt/52</a></td><td style="width: 150px;">ns:pronom</td><td>Rich Text Format, 1.7</td><td style="text-align:center">11</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/507">fmt/507</a></td><td style="width: 150px;">ns:pronom</td><td>Adobe Flash, 10</td><td style="text-align:center">7</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/506">fmt/506</a></td><td style="width: 150px;">ns:pronom</td><td>Adobe Flash, 9</td><td style="text-align:center">17</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/505">fmt/505</a></td><td style="width: 150px;">ns:pronom</td><td>Adobe Flash, 8</td><td style="text-align:center">20</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/503">fmt/503</a></td><td style="width: 150px;">ns:pronom</td><td>AppleDouble Resource Fork</td><td style="text-align:center">9</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/501">fmt/501</a></td><td style="width: 150px;">ns:pronom</td><td>PostScript, 3.1</td><td style="text-align:center">1</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/50">fmt/50</a></td><td style="width: 150px;">ns:pronom</td><td>Rich Text Format, 1.5-1.6</td><td style="text-align:center">52</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/487">fmt/487</a></td><td style="width: 150px;">ns:pronom</td><td>Macro Enabled Microsoft Powerpoint, 2007 Onwards</td><td style="text-align:center">1</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/473">fmt/473</a></td><td style="width: 150px;">ns:pronom</td><td>Microsoft Office Owner File</td><td style="text-align:center">4</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/468">fmt/468</a></td><td style="width: 150px;">ns:pronom</td><td>ISO Disk Image File</td><td style="text-align:center">1</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/45">fmt/45</a></td><td style="width: 150px;">ns:pronom</td><td>Rich Text Format, 1.0-1.4</td><td style="text-align:center">27</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/44">fmt/44</a></td><td style="width: 150px;">ns:pronom</td><td>JPEG File Interchange Format, 1.02</td><td style="text-align:center">74</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/43">fmt/43</a></td><td style="width: 150px;">ns:pronom</td><td>JPEG File Interchange Format, 1.01</td><td style="text-align:center">26</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/423">fmt/423</a></td><td style="width: 150px;">ns:pronom</td><td>Adobe Illustrator, 7.0</td><td style="text-align:center">6</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/422">fmt/422</a></td><td style="width: 150px;">ns:pronom</td><td>Adobe Illustrator, 6.0</td><td style="text-align:center">5</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/420">fmt/420</a></td><td style="width: 150px;">ns:pronom</td><td>Adobe Illustrator, 5.0 / 5.5</td><td style="text-align:center">6</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/42">fmt/42</a></td><td style="width: 150px;">ns:pronom</td><td>JPEG File Interchange Format, 1.00</td><td style="text-align:center">10</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/418">fmt/418</a></td><td style="width: 150px;">ns:pronom</td><td>Adobe Illustrator, 3.0 / 3.2</td><td style="text-align:center">2</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/417">fmt/417</a></td><td style="width: 150px;">ns:pronom</td><td>Adobe Illustrator, 88</td><td style="text-align:center">1</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/412">fmt/412</a></td><td style="width: 150px;">ns:pronom</td><td>Microsoft Word for Windows, 2007 onwards</td><td style="text-align:center">24</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/41">fmt/41</a></td><td style="width: 150px;">ns:pronom</td><td>Raw JPEG Stream</td><td style="text-align:center">21</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/40">fmt/40</a></td><td style="width: 150px;">ns:pronom</td><td>Microsoft Word Document, 97-2003</td><td style="text-align:center">367</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/4">fmt/4</a></td><td style="width: 150px;">ns:pronom</td><td>Graphics Interchange Format, 89a</td><td style="text-align:center">101</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/396">fmt/396</a></td><td style="width: 150px;">ns:pronom</td><td>PocketMobi (Palm Resource) File</td><td style="text-align:center">1</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/390">fmt/390</a></td><td style="width: 150px;">ns:pronom</td><td>Log ASCII Standard Format, 2.0</td><td style="text-align:center">2</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/39">fmt/39</a></td><td style="width: 150px;">ns:pronom</td><td>Microsoft Word Document, 6.0/95</td><td style="text-align:center">63</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/388">fmt/388</a></td><td style="width: 150px;">ns:pronom</td><td>Internet Calendar and Scheduling format</td><td style="text-align:center">4</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/38">fmt/38</a></td><td style="width: 150px;">ns:pronom</td><td>Microsoft Word for Windows Document, 2.0</td><td style="text-align:center">12</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/372">fmt/372</a></td><td style="width: 150px;">ns:pronom</td><td>Earth Resource Satellite image header format</td><td style="text-align:center">1</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/37">fmt/37</a></td><td style="width: 150px;">ns:pronom</td><td>Microsoft Word for Windows Document, 1.0</td><td style="text-align:center">10</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/354">fmt/354</a></td><td style="width: 150px;">ns:pronom</td><td>Acrobat PDF/A - Portable Document Format, 1b</td><td style="text-align:center">4</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/353">fmt/353</a></td><td style="width: 150px;">ns:pronom</td><td>Tagged Image File Format</td><td style="text-align:center">12</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/341">fmt/341</a></td><td style="width: 150px;">ns:pronom</td><td>Macintosh PICT Image, 2.0</td><td style="text-align:center">1</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/34">fmt/34</a></td><td style="width: 150px;">ns:pronom</td><td>AutoCAD Drawing, R14</td><td style="text-align:center">1</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/329">fmt/329</a></td><td style="width: 150px;">ns:pronom</td><td>Shell Archive Format</td><td style="text-align:center">6</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/328">fmt/328</a></td><td style="width: 150px;">ns:pronom</td><td>EndNote Import File</td><td style="text-align:center">1</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/32">fmt/32</a></td><td style="width: 150px;">ns:pronom</td><td>AutoCAD Drawing, R11/12</td><td style="text-align:center">2</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/3">fmt/3</a></td><td style="width: 150px;">ns:pronom</td><td>Graphics Interchange Format, 87a</td><td style="text-align:center">37</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/288">fmt/288</a></td><td style="width: 150px;">ns:pronom</td><td>Microsoft Front Page Server Extension Configuration</td><td style="text-align:center">16</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/284">fmt/284</a></td><td style="width: 150px;">ns:pronom</td><td>Gridded Binary, 1.0</td><td style="text-align:center">1</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/281">fmt/281</a></td><td style="width: 150px;">ns:pronom</td><td>LaTeX (Subdocument)</td><td style="text-align:center">1</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/280">fmt/280</a></td><td style="width: 150px;">ns:pronom</td><td>LaTeX (Master document)</td><td style="text-align:center">2</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/276">fmt/276</a></td><td style="width: 150px;">ns:pronom</td><td>Acrobat PDF 1.7 - Portable Document Format, 1.7</td><td style="text-align:center">185</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/244">fmt/244</a></td><td style="width: 150px;">ns:pronom</td><td>Keyhole Markup Language (XML)</td><td style="text-align:center">22</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/215">fmt/215</a></td><td style="width: 150px;">ns:pronom</td><td>Microsoft Powerpoint for Windows, 2007 onwards</td><td style="text-align:center">55</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/214">fmt/214</a></td><td style="width: 150px;">ns:pronom</td><td>Microsoft Excel for Windows, 2007 onwards</td><td style="text-align:center">18</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/20">fmt/20</a></td><td style="width: 150px;">ns:pronom</td><td>Acrobat PDF 1.6 - Portable Document Format, 1.6</td><td style="text-align:center">2313</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/190">fmt/190</a></td><td style="width: 150px;">ns:pronom</td><td>Adobe FrameMaker Document, 5.0</td><td style="text-align:center">1</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/19">fmt/19</a></td><td style="width: 150px;">ns:pronom</td><td>Acrobat PDF 1.5 - Portable Document Format, 1.5</td><td style="text-align:center">2039</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/185">fmt/185</a></td><td style="width: 150px;">ns:pronom</td><td>Prime OCR, 3.9</td><td style="text-align:center">1</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/18">fmt/18</a></td><td style="width: 150px;">ns:pronom</td><td>Acrobat PDF 1.4 - Portable Document Format, 1.4</td><td style="text-align:center">3891</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/17">fmt/17</a></td><td style="width: 150px;">ns:pronom</td><td>Acrobat PDF 1.3 - Portable Document Format, 1.3</td><td style="text-align:center">3556</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/16">fmt/16</a></td><td style="width: 150px;">ns:pronom</td><td>Acrobat PDF 1.2 - Portable Document Format, 1.2</td><td style="text-align:center">2216</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/15">fmt/15</a></td><td style="width: 150px;">ns:pronom</td><td>Acrobat PDF 1.1 - Portable Document Format, 1.1</td><td style="text-align:center">588</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/14">fmt/14</a></td><td style="width: 150px;">ns:pronom</td><td>Acrobat PDF 1.0 - Portable Document Format, 1.0</td><td style="text-align:center">108</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/136">fmt/136</a></td><td style="width: 150px;">ns:pronom</td><td>OpenDocument Text, 1.0</td><td style="text-align:center">2</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/133">fmt/133</a></td><td style="width: 150px;">ns:pronom</td><td>Windows Media Video</td><td style="text-align:center">6</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/132">fmt/132</a></td><td style="width: 150px;">ns:pronom</td><td>Windows Media Audio</td><td style="text-align:center">1</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/126">fmt/126</a></td><td style="width: 150px;">ns:pronom</td><td>Microsoft Powerpoint Presentation, 97-2003</td><td style="text-align:center">255</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/124">fmt/124</a></td><td style="width: 150px;">ns:pronom</td><td>Encapsulated PostScript File Format, 3</td><td style="text-align:center">38</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/123">fmt/123</a></td><td style="width: 150px;">ns:pronom</td><td>Encapsulated PostScript File Format, 2.0</td><td style="text-align:center">22</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/122">fmt/122</a></td><td style="width: 150px;">ns:pronom</td><td>Encapsulated PostScript File Format, 1.2</td><td style="text-align:center">26</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/116">fmt/116</a></td><td style="width: 150px;">ns:pronom</td><td>Windows Bitmap, 3.0</td><td style="text-align:center">25</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/111">fmt/111</a></td><td style="width: 150px;">ns:pronom</td><td>OLE2 Compound Document Format</td><td style="text-align:center">80</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/110">fmt/110</a></td><td style="width: 150px;">ns:pronom</td><td>Macromedia Flash, 7</td><td style="text-align:center">19</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/11">fmt/11</a></td><td style="width: 150px;">ns:pronom</td><td>Portable Network Graphics, 1.0</td><td style="text-align:center">48</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/109">fmt/109</a></td><td style="width: 150px;">ns:pronom</td><td>Macromedia Flash, 6</td><td style="text-align:center">23</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/108">fmt/108</a></td><td style="width: 150px;">ns:pronom</td><td>Macromedia Flash, 5</td><td style="text-align:center">10</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/107">fmt/107</a></td><td style="width: 150px;">ns:pronom</td><td>Macromedia Flash, 4</td><td style="text-align:center">20</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/106">fmt/106</a></td><td style="width: 150px;">ns:pronom</td><td>Macromedia Flash, 3</td><td style="text-align:center">7</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/104">fmt/104</a></td><td style="width: 150px;">ns:pronom</td><td>Macromedia Flash, 1</td><td style="text-align:center">10</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/102">fmt/102</a></td><td style="width: 150px;">ns:pronom</td><td>Extensible Hypertext Markup Language, 1.0</td><td style="text-align:center">30</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/101">fmt/101</a></td><td style="width: 150px;">ns:pronom</td><td>Extensible Markup Language, 1.0</td><td style="text-align:center">177</td></tr>
+<tr><td style="width: 200px;"><a target="_blank" href="http://apps.nationalarchives.gov.uk/PRONOM/fmt/100">fmt/100</a></td><td style="width: 150px;">ns:pronom</td><td>Hypertext Markup Language, 4.01</td><td style="text-align:center">135</td></tr>
+</table>
+</br>
+</br>
+<hr/>
+<h2>Aggregated Frequency of File Format Signature Identifiers in Accession/Extract: </h2>
+<details><summary>More Detail:</br></summary></br>Listing of format identification, namespace, count, and match basis for files identified using file format signatures. Some tools can report what the basis or rationale was for returning an identification - this is reported to demonstrate the diversity/complexity of an accession/extract and to provide clues for similar files in the accession/extract where there is zero identification. Counts are shown for each entry in round () brackets.</br></details>
+</br>
+<table style='border-collapse: collapse; border-color: #222222'><tr>
+<td width='800'><code>ns:pronom x-fmt/92, Adobe Photoshop,   (2)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom x-fmt/91, Postscript, 1.0  (1)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom x-fmt/9, dBASE Database, III  (711)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom x-fmt/88, Microsoft Powerpoint Presentation, 4.0  (12)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom x-fmt/8, dBASE Database, II  (1)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom x-fmt/65, Microsoft Word for Macintosh Document, 5.0  (13)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom x-fmt/64, Microsoft Word for Macintosh Document, 4.0  (1)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom x-fmt/49, AutoCAD Design Web Format, 6.0  (10)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom x-fmt/45, Microsoft Word Document Template, 97-2003  (2)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom x-fmt/44, WordPerfect for MS-DOS/Windows Document, 6.0  (17)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom x-fmt/429, Microsoft Web Archive,   (1)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom x-fmt/428, Microsoft Windows Shortcut,   (4)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom x-fmt/420, Windows Setup File,   (3)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom x-fmt/416, BinHex Binary Text,   (4)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom x-fmt/408, PostScript, 3.0  (40)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom x-fmt/406, PostScript, 2.0  (43)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom x-fmt/394, WordPerfect for MS-DOS/Windows Document, 5.1  (21)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom x-fmt/391, Exchangeable Image File Format (Compressed), 2.2  (5)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom x-fmt/390, Exchangeable Image File Format (Compressed), 2.1  (7)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom x-fmt/383, Flexible Image Transport System,   (28)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom x-fmt/367, Truevision TGA Bitmap, 1.0  (1)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom x-fmt/280, XML Schema Definition,   (14)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom x-fmt/275, Microsoft Word for MS-DOS Document, 5.0  (9)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom x-fmt/274, Microsoft Word for MS-DOS Document, 4.0  (15)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom x-fmt/268, BZIP2 Compressed Archive,   (1)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom x-fmt/266, GZIP Format,   (45)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom x-fmt/263, ZIP Format,   (33)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom x-fmt/257, Microsoft Publisher, 2002  (1)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom x-fmt/235, ESRI Arc/View ShapeFile,   (3)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom x-fmt/226, ESRI Arc/Info Export File,   (9)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom x-fmt/219, Internet Archive, 1.0  (1)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom x-fmt/207, X-Windows Bitmap Image, X11  (7)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom x-fmt/119, Windows Metafile Image,   (1)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom x-fmt/117, Lotus 1-2-3 Worksheet, 1.0  (2)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom x-fmt/115, Lotus 1-2-3 Worksheet, 3.0  (6)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom x-fmt/114, Lotus 1-2-3 Worksheet, 2.0  (7)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/99, Hypertext Markup Language, 4.0  (13)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/98, Hypertext Markup Language, 3.2  (2)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/97, Hypertext Markup Language, 2.0  (13)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/96, Hypertext Markup Language,   (319)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/950, MIME Email, 1.0  (61)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/94, Virtual Reality Modeling Language, 2.0  (10)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/931, Mathcad Document, Binary  (4)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/833, Open Inventor File Format, 2.x  (2)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/78, Drawing Interchange File Format (ASCII), 2000-2002  (2)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/77, Drawing Interchange File Format (ASCII), R14  (2)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/76, Drawing Interchange File Format (ASCII), R13  (1)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/75, Drawing Interchange File Format (ASCII), R11/12  (3)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/724, Keyhole Markup Language (Container),   (3)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/688, Executable and Linkable Format, 32bit Little Endian  (1)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/682, Thumbs DB file, XP  (1)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/657, Open XML Paper Specification,   (1)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/645, Exchangeable Image File Format (Compressed), 2.2.1  (1)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/63, Drawing Interchange File Format (ASCII), Generic  (2)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/629, Microsoft PowerPoint Show, 2007  (1)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/62, Microsoft Excel 2000-2003 Workbook (xls), 8X  (9)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/611, LDAP Data Interchange Format,   (1)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/61, Microsoft Excel 97 Workbook (xls), 8  (113)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/609, Microsoft Word (Generic), 6.0-2003  (10)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/59, Microsoft Excel 5.0/95 Workbook (xls), 5/95  (9)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/584, Windows Media Metafile,   (1)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/583, Vector Markup Language,   (55)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/58, Microsoft Excel 4.0 Workbook (xls), 4W  (1)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/57, Microsoft Excel 4.0 Worksheet (xls), 4S  (11)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/561, Adobe Illustrator, 12.0  (4)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/560, Adobe Illustrator, 11.0  (5)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/56, Microsoft Excel 3.0 Worksheet (xls), 3  (10)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/559, Adobe Illustrator, 10.0  (8)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/558, Adobe Illustrator, 9.0  (15)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/557, Adobe Illustrator, 8.0  (5)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/55, Microsoft Excel 2.x Worksheet (xls), 2  (9)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/537, Adobe FrameMaker Document, 6.0  (2)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/535, Adobe FrameMaker Document, 4.0  (4)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/534, Adobe FrameMaker Document, 3.0  (4)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/533, Adobe FrameMaker Document, 2.0  (1)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/53, Rich Text Format, 1.8  (18)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/523, Macro enabled Microsoft Word Document OOXML, 2007 Onwards  (1)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/52, Rich Text Format, 1.7  (11)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/507, Adobe Flash, 10  (7)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/506, Adobe Flash, 9  (17)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/505, Adobe Flash, 8  (20)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/503, AppleDouble Resource Fork,   (9)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/501, PostScript, 3.1  (1)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/50, Rich Text Format, 1.5-1.6  (52)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/487, Macro Enabled Microsoft Powerpoint, 2007 Onwards  (1)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/473, Microsoft Office Owner File,   (4)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/468, ISO Disk Image File,   (1)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/45, Rich Text Format, 1.0-1.4  (27)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/44, JPEG File Interchange Format, 1.02  (74)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/43, JPEG File Interchange Format, 1.01  (26)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/423, Adobe Illustrator, 7.0  (6)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/422, Adobe Illustrator, 6.0  (5)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/420, Adobe Illustrator, 5.0 / 5.5  (6)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/42, JPEG File Interchange Format, 1.00  (10)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/418, Adobe Illustrator, 3.0 / 3.2  (2)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/417, Adobe Illustrator, 88  (1)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/412, Microsoft Word for Windows, 2007 onwards  (24)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/41, Raw JPEG Stream,   (21)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/40, Microsoft Word Document, 97-2003  (367)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/4, Graphics Interchange Format, 89a  (101)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/396, PocketMobi (Palm Resource) File,   (1)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/390, Log ASCII Standard Format, 2.0  (2)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/39, Microsoft Word Document, 6.0/95  (63)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/388, Internet Calendar and Scheduling format,   (4)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/38, Microsoft Word for Windows Document, 2.0  (12)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/372, Earth Resource Satellite image header format,   (1)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/37, Microsoft Word for Windows Document, 1.0  (10)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/354, Acrobat PDF/A - Portable Document Format, 1b  (4)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/353, Tagged Image File Format,   (12)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/341, Macintosh PICT Image, 2.0  (1)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/34, AutoCAD Drawing, R14  (1)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/329, Shell Archive Format,   (6)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/328, EndNote Import File,   (1)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/32, AutoCAD Drawing, R11/12  (2)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/3, Graphics Interchange Format, 87a  (37)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/288, Microsoft Front Page Server Extension Configuration,   (16)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/284, Gridded Binary, 1.0  (1)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/281, LaTeX (Subdocument),   (1)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/280, LaTeX (Master document),   (2)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/276, Acrobat PDF 1.7 - Portable Document Format, 1.7  (185)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/244, Keyhole Markup Language (XML),   (22)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/215, Microsoft Powerpoint for Windows, 2007 onwards  (55)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/214, Microsoft Excel for Windows, 2007 onwards  (18)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/20, Acrobat PDF 1.6 - Portable Document Format, 1.6  (2313)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/190, Adobe FrameMaker Document, 5.0  (1)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/19, Acrobat PDF 1.5 - Portable Document Format, 1.5  (2039)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/185, Prime OCR, 3.9  (1)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/18, Acrobat PDF 1.4 - Portable Document Format, 1.4  (3891)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/17, Acrobat PDF 1.3 - Portable Document Format, 1.3  (3556)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/16, Acrobat PDF 1.2 - Portable Document Format, 1.2  (2216)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/15, Acrobat PDF 1.1 - Portable Document Format, 1.1  (588)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/14, Acrobat PDF 1.0 - Portable Document Format, 1.0  (108)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/136, OpenDocument Text, 1.0  (2)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/133, Windows Media Video,   (6)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/132, Windows Media Audio,   (1)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/126, Microsoft Powerpoint Presentation, 97-2003  (255)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/124, Encapsulated PostScript File Format, 3  (38)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/123, Encapsulated PostScript File Format, 2.0  (22)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/122, Encapsulated PostScript File Format, 1.2  (26)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/116, Windows Bitmap, 3.0  (25)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/111, OLE2 Compound Document Format,   (80)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/110, Macromedia Flash, 7  (19)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/11, Portable Network Graphics, 1.0  (48)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/109, Macromedia Flash, 6  (23)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/108, Macromedia Flash, 5  (10)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/107, Macromedia Flash, 4  (20)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/106, Macromedia Flash, 3  (7)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/104, Macromedia Flash, 1  (10)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/102, Extensible Hypertext Markup Language, 1.0  (30)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/101, Extensible Markup Language, 1.0  (177)</br></br></code></td>
+</tr><tr>
+<td width='800'><code>ns:pronom fmt/100, Hypertext Markup Language, 4.01  (135)</br></br></code></td>
+</tr></table>
+<hr/>
+<h2>Identification Method Frequency: </h2>
+<details><summary>More Detail:</br></summary></br>Lists in descending order the types of identification DROID used for each file, indicating the reliability of each identification, with Container/Signature being the more concrete forms of identification and extension being a less certain way to identify a format. A file format signature is a string in binary (or hexadecimal (hex)) that uniquely identifies a file format. Container identification takes this concept further by being able to match specific elements of a file format's structure. Counts are shown for each entry in round () brackets.</br></details>
+</br>
+<table style='border-collapse: collapse; border-color: #222222'><tr>
+<td width='160'><code>Signature (17789)</code></td>
+<td width='160'><code>None (10463)</code></td>
+<td width='160'><code>Extension (1599)</code></td>
+<td width='160'><code>Container (927)</code></td>
+</tr></table>
+</br>
+<hr/>
+<h2>Extension Only Identification in the Accession/Extract: </h2>
+<details><summary>More Detail:</br></summary></br>A list of the identifier and format name of each format of one or more files where the file format identification tool has tried to offer suggestions as to potential file format by utilizing the file extension where a file has not been matched by file format signature.</br></details>
+</br>
+<table style='border-collapse: collapse; border-color: #222222'><tr>
+<td width='400'><code>fmt/175, Microsoft Excel for Macintosh</code></td>
+<td width='400'><code>fmt/176, Microsoft Excel for Macintosh</code></td>
+</tr><tr>
+<td width='400'><code>fmt/177, Microsoft Excel for Macintosh</code></td>
+<td width='400'><code>fmt/206, Structured Query Language Data</code></td>
+</tr><tr>
+<td width='400'><code>fmt/609, Microsoft Word (Generic)</code></td>
+<td width='400'><code>fmt/754, Microsoft Word Document (Password Protected)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/879, Fortran</code></td>
+<td width='400'><code>fmt/892, Compound WordPerfect for Windows Document</code></td>
+</tr><tr>
+<td width='400'><code>x-fmt/111, Plain Text File</code></td>
+<td width='400'><code>x-fmt/131, Stationery for Mac OS X</code></td>
+</tr><tr>
+<td width='400'><code>x-fmt/18, Comma Separated Values</code></td>
+<td width='400'><code>x-fmt/195, Standard Generalized Markup Language</code></td>
+</tr><tr>
+<td width='400'><code>x-fmt/203, WordPerfect for Windows Document</code></td>
+<td width='400'><code>x-fmt/252, Microsoft Publisher</code></td>
+</tr><tr>
+<td width='400'><code>x-fmt/253, Microsoft Publisher</code></td>
+<td width='400'><code>x-fmt/254, Microsoft Publisher</code></td>
+</tr><tr>
+<td width='400'><code>x-fmt/255, Microsoft Publisher</code></td>
+<td width='400'><code>x-fmt/256, Microsoft Publisher</code></td>
+</tr><tr>
+<td width='400'><code>x-fmt/257, Microsoft Publisher</code></td>
+<td width='400'><code>x-fmt/273, Microsoft Word for MS-DOS Document</code></td>
+</tr><tr>
+<td width='400'><code>x-fmt/329, Interleaf Document</code></td>
+<td width='400'><code>x-fmt/42, Wordperfect Secondary File</code></td>
+</tr><tr>
+<td width='400'><code>x-fmt/422, Java language source code file</code></td>
+<td width='400'><code>x-fmt/423, JavaScript file</code></td>
+</tr><tr>
+<td width='400'><code>x-fmt/43, Wordperfect Secondary File</code></td>
+<td width='400'><code>x-fmt/62, Log File</code></td>
+</tr></table>
+</br>
+<hr/>
+<h2>Frequency of Extension Only Identification In Accession/Extract: </h2>
+<details><summary>More Detail:</br></summary></br>A count of the files associated with possible identifiers where file format identification tool has tried to offer suggestions as to potential file format by utilizing the file extension where a file format signature has not matched a file. Counts are shown for each entry in round () brackets.</br></details>
+</br>
+<table style='border-collapse: collapse; border-color: #222222'><tr>
+<td width='275'><code>ns:pronom  x-fmt/111 (970)</code></td>
+<td width='275'><code>ns:pronom  x-fmt/62 (250)</code></td>
+<td width='275'><code>ns:pronom  x-fmt/18 (206)</code></td>
+</tr><tr>
+<td width='275'><code>ns:pronom  fmt/206 (72)</code></td>
+<td width='275'><code>ns:pronom  x-fmt/422 (30)</code></td>
+<td width='275'><code>ns:pronom  x-fmt/195 (29)</code></td>
+</tr><tr>
+<td width='275'><code>ns:pronom  fmt/892 (17)</code></td>
+<td width='275'><code>ns:pronom  x-fmt/256 (13)</code></td>
+<td width='275'><code>ns:pronom  x-fmt/257 (13)</code></td>
+</tr><tr>
+<td width='275'><code>ns:pronom  x-fmt/254 (13)</code></td>
+<td width='275'><code>ns:pronom  x-fmt/255 (13)</code></td>
+<td width='275'><code>ns:pronom  x-fmt/252 (13)</code></td>
+</tr><tr>
+<td width='275'><code>ns:pronom  x-fmt/253 (13)</code></td>
+<td width='275'><code>ns:pronom  x-fmt/203 (10)</code></td>
+<td width='275'><code>ns:pronom  fmt/879 (9)</code></td>
+</tr><tr>
+<td width='275'><code>ns:pronom  fmt/609 (7)</code></td>
+<td width='275'><code>ns:pronom  x-fmt/131 (7)</code></td>
+<td width='275'><code>ns:pronom  x-fmt/273 (7)</code></td>
+</tr><tr>
+<td width='275'><code>ns:pronom  fmt/754 (7)</code></td>
+<td width='275'><code>ns:pronom  x-fmt/42 (7)</code></td>
+<td width='275'><code>ns:pronom  x-fmt/43 (7)</code></td>
+</tr><tr>
+<td width='275'><code>ns:pronom  x-fmt/329 (7)</code></td>
+<td width='275'><code>ns:pronom  x-fmt/423 (2)</code></td>
+<td width='275'><code>ns:pronom  fmt/176 (1)</code></td>
+</tr><tr>
+<td width='275'><code>ns:pronom  fmt/177 (1)</code></td>
+<td width='275'><code>ns:pronom  fmt/175 (1)</code></td>
+</tr></table>
+</br>
+<hr/>
+<h2>Frequency of All Extensions: </h2>
+<details><summary>More Detail:</br></summary></br>Lists the gamut of file extensions alongside how many times they appear in accession/extract in descending order. This information can be used to identify the diversity/complexity of the accession/extract, but also to identify the consistency with which extensions may have been used in the accession/extract and may indicate how much work may be needed to correct inconsistencies to create a clean ingest. Counts are shown for each entry in round () brackets.</br></details>
+</br>
+<table style='border-collapse: collapse; border-color: #222222'><tr>
+<td width='160'><code>pdf (15093)</code></td>
+<td width='160'><code>html (1074)</code></td>
+<td width='160'><code>txt (1072)</code></td>
+<td width='160'><code>dbase3 (701)</code></td>
+<td width='160'><code>unk (502)</code></td>
+</tr><tr>
+<td width='160'><code>doc (431)</code></td>
+<td width='160'><code>xml (263)</code></td>
+<td width='160'><code>log (254)</code></td>
+<td width='160'><code>ppt (217)</code></td>
+<td width='160'><code>csv (215)</code></td>
+</tr><tr>
+<td width='160'><code>text (182)</code></td>
+<td width='160'><code>ps (173)</code></td>
+<td width='160'><code>gif (163)</code></td>
+<td width='160'><code>swf (151)</code></td>
+<td width='160'><code>jpg (140)</code></td>
+</tr><tr>
+<td width='160'><code>eps (110)</code></td>
+<td width='160'><code>rtf (109)</code></td>
+<td width='160'><code>xls (101)</code></td>
+<td width='160'><code>sql (72)</code></td>
+<td width='160'><code>pps (60)</code></td>
+</tr><tr>
+<td width='160'><code>kml (59)</code></td>
+<td width='160'><code>tmp (55)</code></td>
+<td width='160'><code>pptx (52)</code></td>
+<td width='160'><code>png (48)</code></td>
+<td width='160'><code>wp (48)</code></td>
+</tr><tr>
+<td width='160'><code>hlp (44)</code></td>
+<td width='160'><code>sgml (35)</code></td>
+<td width='160'><code>java (30)</code></td>
+<td width='160'><code>kmz (30)</code></td>
+<td width='160'><code>docx (27)</code></td>
+</tr><tr>
+<td width='160'><code>bmp (25)</code></td>
+<td width='160'><code>gz (25)</code></td>
+<td width='160'><code>xlsx (16)</code></td>
+<td width='160'><code>pub (15)</code></td>
+<td width='160'><code>fits (12)</code></td>
+</tr><tr>
+<td width='160'><code>zip (12)</code></td>
+<td width='160'><code>ttf (11)</code></td>
+<td width='160'><code>dwf (10)</code></td>
+<td width='160'><code>f (10)</code></td>
+<td width='160'><code>fm (10)</code></td>
+</tr><tr>
+<td width='160'><code>gls (10)</code></td>
+<td width='160'><code>xbm (8)</code></td>
+<td width='160'><code>sys (7)</code></td>
+<td width='160'><code>wk1 (7)</code></td>
+<td width='160'><code>wk3 (5)</code></td>
+</tr><tr>
+<td width='160'><code>lnk (4)</code></td>
+<td width='160'><code>data (3)</code></td>
+<td width='160'><code>exported (3)</code></td>
+<td width='160'><code>jar (3)</code></td>
+<td width='160'><code>123 (2)</code></td>
+</tr><tr>
+<td width='160'><code>chp (2)</code></td>
+<td width='160'><code>g3 (2)</code></td>
+<td width='160'><code>js (2)</code></td>
+<td width='160'><code>mac (2)</code></td>
+<td width='160'><code>odp (2)</code></td>
+</tr><tr>
+<td width='160'><code>tex (2)</code></td>
+<td width='160'><code>icns (1)</code></td>
+<td width='160'><code>ileaf (1)</code></td>
+<td width='160'><code>pst (1)</code></td>
+<td width='160'><code>squeak (1)</code></td>
+</tr></table>
+</br>
+<hr/>
+<h2>Unique Extensions Identified Across All Objects (ID and non-ID): </h2>
+<details><summary>More Detail:</br></summary></br>Lists all the file extensions found in all the files in the accession/extract. This information can be used to identify the diversity/complexity of the accession/extract, but also to identify the consistency with which extensions may have been used in the accession/extract and may indicate how much work may be needed to correct inconsistencies to create a clean ingest.</br></details>
+</br>
+<table style='border-collapse: collapse; border-color: #222222'><tr>
+<td width='160'><code>123</code></td>
+<td width='160'><code>bmp</code></td>
+<td width='160'><code>chp</code></td>
+<td width='160'><code>csv</code></td>
+<td width='160'><code>data</code></td>
+</tr><tr>
+<td width='160'><code>dbase3</code></td>
+<td width='160'><code>doc</code></td>
+<td width='160'><code>docx</code></td>
+<td width='160'><code>dwf</code></td>
+<td width='160'><code>eps</code></td>
+</tr><tr>
+<td width='160'><code>exported</code></td>
+<td width='160'><code>f</code></td>
+<td width='160'><code>fits</code></td>
+<td width='160'><code>fm</code></td>
+<td width='160'><code>g3</code></td>
+</tr><tr>
+<td width='160'><code>gif</code></td>
+<td width='160'><code>gls</code></td>
+<td width='160'><code>gz</code></td>
+<td width='160'><code>hlp</code></td>
+<td width='160'><code>html</code></td>
+</tr><tr>
+<td width='160'><code>icns</code></td>
+<td width='160'><code>ileaf</code></td>
+<td width='160'><code>jar</code></td>
+<td width='160'><code>java</code></td>
+<td width='160'><code>jpg</code></td>
+</tr><tr>
+<td width='160'><code>js</code></td>
+<td width='160'><code>kml</code></td>
+<td width='160'><code>kmz</code></td>
+<td width='160'><code>lnk</code></td>
+<td width='160'><code>log</code></td>
+</tr><tr>
+<td width='160'><code>mac</code></td>
+<td width='160'><code>odp</code></td>
+<td width='160'><code>pdf</code></td>
+<td width='160'><code>png</code></td>
+<td width='160'><code>pps</code></td>
+</tr><tr>
+<td width='160'><code>ppt</code></td>
+<td width='160'><code>pptx</code></td>
+<td width='160'><code>ps</code></td>
+<td width='160'><code>pst</code></td>
+<td width='160'><code>pub</code></td>
+</tr><tr>
+<td width='160'><code>rtf</code></td>
+<td width='160'><code>sgml</code></td>
+<td width='160'><code>sql</code></td>
+<td width='160'><code>squeak</code></td>
+<td width='160'><code>swf</code></td>
+</tr><tr>
+<td width='160'><code>sys</code></td>
+<td width='160'><code>tex</code></td>
+<td width='160'><code>text</code></td>
+<td width='160'><code>tmp</code></td>
+<td width='160'><code>ttf</code></td>
+</tr><tr>
+<td width='160'><code>txt</code></td>
+<td width='160'><code>unk</code></td>
+<td width='160'><code>wk1</code></td>
+<td width='160'><code>wk3</code></td>
+<td width='160'><code>wp</code></td>
+</tr><tr>
+<td width='160'><code>xbm</code></td>
+<td width='160'><code>xls</code></td>
+<td width='160'><code>xlsx</code></td>
+<td width='160'><code>xml</code></td>
+<td width='160'><code>zip</code></td>
+</tr></table>
+</br>
+<hr/>
+<h2>List of Files With Multiple Identifications: </h2>
+<details><summary>More Detail:</br></summary></br>List of files with an uncertain file format identification. These files will almost certainly need to be investigated independently to understand their preservation risks. Where possible file format signatures will be created to ensure that the same types of object are identified in future.</br></details>
+</br>
+<table style='border-collapse: collapse; border-color: #222222'><tr>
+<td width='800'><code>E:\archives-sample-files\govdocs_selected.tar\govdocs_selected\govdocs_selected\PDF_1080\224727.pdf</br></br></code></td>
+</tr><tr>
+<td width='800'><code>E:\archives-sample-files\govdocs_selected.tar\govdocs_selected\govdocs_selected\HTML_102\374355.rtf</br></br></code></td>
+</tr><tr>
+<td width='800'><code>E:\archives-sample-files\govdocs_selected.tar\govdocs_selected\govdocs_selected\HTML_102\374362.rtf</br></br></code></td>
+</tr><tr>
+<td width='800'><code>E:\archives-sample-files\govdocs_selected.tar\govdocs_selected\govdocs_selected\HTML_143\558860.html</br></br></code></td>
+</tr><tr>
+<td width='800'><code>E:\archives-sample-files\govdocs_selected.tar\govdocs_selected\govdocs_selected\DOC_83\908606.html</br></br></code></td>
+</tr></table>
+<hr/>
+<h2>MIME Type (Internet Media Type) Frequency: </h2>
+<details><summary>More Detail:</br></summary></br>Lists all the MIME Types alongside how many times they appear in the accession/extract in descending order. A MIME Type is an identification used by internet browsers to determine how a browser will represent a file on the internet by displaying, playing or prompting the user to download the object. Counts are shown for each entry in round () brackets.</br></details>
+</br>
+<table style='border-collapse: collapse; border-color: #222222'><tr>
+<td width='400'><code>application/pdf (14900)</code></td>
+<td width='400'><code>application/msword (500)</code></td>
+</tr><tr>
+<td width='400'><code>text/html (482)</code></td>
+<td width='400'><code>application/vnd.ms-powerpoint (267)</code></td>
+</tr><tr>
+<td width='400'><code>application/xml, text/xml (177)</code></td>
+<td width='400'><code>application/postscript (171)</code></td>
+</tr><tr>
+<td width='400'><code>application/vnd.ms-excel (162)</code></td>
+<td width='400'><code>image/jpeg (144)</code></td>
+</tr><tr>
+<td width='400'><code>image/gif (138)</code></td>
+<td width='400'><code>application/x-shockwave-flash (133)</code></td>
+</tr><tr>
+<td width='400'><code>application/rtf, text/rtf (106)</code></td>
+<td width='400'><code>message/rfc822 (61)</code></td>
+</tr><tr>
+<td width='400'><code>application/vnd.openxmlformats-officedocument.presentationml.presentation (55)</code></td>
+<td width='400'><code>image/png (48)</code></td>
+</tr><tr>
+<td width='400'><code>application/x-gzip (45)</code></td>
+<td width='400'><code>application/vnd.wordperfect (38)</code></td>
+</tr><tr>
+<td width='400'><code>application/zip (33)</code></td>
+<td width='400'><code>application/xhtml+xml (30)</code></td>
+</tr><tr>
+<td width='400'><code>application/fits, image/fits (28)</code></td>
+<td width='400'><code>image/bmp (25)</code></td>
+</tr><tr>
+<td width='400'><code>application/vnd.openxmlformats-officedocument.wordprocessingml.document (24)</code></td>
+<td width='400'><code>application/vnd.openxmlformats-officedocument.spreadsheetml.sheet (18)</code></td>
+</tr><tr>
+<td width='400'><code>application/xml (14)</code></td>
+<td width='400'><code>application/vnd.framemaker (12)</code></td>
+</tr><tr>
+<td width='400'><code>image/tiff (12)</code></td>
+<td width='400'><code>application/dwf, application/x-dwf, drawing/x-dwf, image/vnd.dwf, image/x-dwf, model/vnd.dwf (10)</code></td>
+</tr><tr>
+<td width='400'><code>image/vnd.dxf (10)</code></td>
+<td width='400'><code>model/vrml (10)</code></td>
+</tr><tr>
+<td width='400'><code>application/vnd.lotus-1-2-3, application/x-123 (9)</code></td>
+<td width='400'><code>multipart/appledouble (9)</code></td>
+</tr><tr>
+<td width='400'><code>image/x-xbitmap (7)</code></td>
+<td width='400'><code>application/lotus123, application/vnd.lotus-1-2-3 (6)</code></td>
+</tr><tr>
+<td width='400'><code>application/x-sh, application/x-shar (6)</code></td>
+<td width='400'><code>video/x-ms-wmv (6)</code></td>
+</tr><tr>
+<td width='400'><code>text/calendar (4)</code></td>
+<td width='400'><code>application/inf (3)</code></td>
+</tr><tr>
+<td width='400'><code>application/vnd.google-earth.kmz (3)</code></td>
+<td width='400'><code>image/vnd.dwg (3)</code></td>
+</tr><tr>
+<td width='400'><code>application/rtf,  text/rtf (2)</code></td>
+<td width='400'><code>application/vnd.oasis.opendocument.text (2)</code></td>
+</tr><tr>
+<td width='400'><code>image/vnd.adobe.photoshop (2)</code></td>
+<td width='400'><code>application/oxps (1)</code></td>
+</tr><tr>
+<td width='400'><code>application/vnd.ms-powerpoint.presentation.macroEnabled.12 (1)</code></td>
+<td width='400'><code>application/vnd.ms-word.document.macroEnabled.12 (1)</code></td>
+</tr><tr>
+<td width='400'><code>application/vnd.openxmlformats-officedocument.presentationml.slideshow (1)</code></td>
+<td width='400'><code>application/x-bzip2 (1)</code></td>
+</tr><tr>
+<td width='400'><code>application/x-endnote-refer (1)</code></td>
+<td width='400'><code>application/x-internet-archive (1)</code></td>
+</tr><tr>
+<td width='400'><code>audio/x-ms-wma (1)</code></td>
+<td width='400'><code>image/wmf (1)</code></td>
+</tr><tr>
+<td width='400'><code>image/x-pict (1)</code></td>
+<td width='400'><code>message/rfc822, multipart/related (1)</code></td>
+</tr></table>
+</br>
+<hr/>
+<h2>Results Per Identifier Namespace: </h2>
+<details><summary>More Detail:</br></summary></br>Namespace describes an identifier used by any specific tool. Format identification tools such as Siegfried can include multiple identifiers, e.g. PRONOM (and) Freedesktop.org's MIME identification. Tools may also include subsets of an identification mechanism that will also be indicated by use of a different namespace, for example, a set of PRONOM identifiers for recognising types of audio visual file, exclusively. Counts are shown for each entry in round () brackets.</br></details>
+</br>
+<li title="The namespace that we're reporting on and the specific details associated with it. e.g. a PRONOM namespace with details of the signature file version used."><b>Namespace</b>: <i>pronom (govdocs-droid-v86-20160727-container-65535.csv)</i></li>
+<li title="The number of files that are identified based on a file format signature. A file format signature is a string in binary (or hexadecimal (hex)) that uniquely identifies a file format. Note: A signature is a more mature form of a magic number that can be read across the file. A basic magic number is a unique section at the beginning of a file that can be seen when the file is looked at with an x-ray machine (the innards of a file is examined). This number could be in binary (that is numerical) or ASCII (readable text) form.">Total Identified Files (Based on Signature): 18716</li>
+<li title="This is the total number of files with uncertain file format identification. DROID will help to identify the number of potential formats.">Total Multiple Identifications (Based on Signature): 5</li>
+<li title="This is the number of files identified only by the file extension alone (e.g. there are no verifiable file format signatures in the file, only the file extension is provided). This number may represent files not identified at all (i.e.. there is no identification information in the DROID database).">Total Unidentified Files: 7408</li>
+<li title="Files that can only be identified by their extension (e.g. ".DOC" might be a Microsoft Word file, ".MP3" might be an audio file) This is a sub-set of the "Total unidentified files".">Total Extension ID Only Count: 1725</li>
+<li title="Percentage of files with formats that are positively identified by DROID, pending other processes such as format validation, this percentage may be indicative of how much of the accession/extract will need little or no intervention to ingest cleanly.">Percentage of Accession/Extract Identified: 71.6</li>
+<li title="Percentage of files with formats that were not able to be identified by DROID, which could be due to a signature not being in the PRONOM database yet, the file being corrupt, a signature and extension mismatch or another reason. This percentage is indicative of how much work will be involved in processing the accession/extract.">Percentage of Accession/Extract Unidentified: 28.4</li>
+</br>
+<table style='border-collapse: collapse; border-color: #222222'><tr>
+<td width='400'><code>fmt/18 (3891)</code></td>
+<td width='400'><code>fmt/17 (3556)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/20 (2313)</code></td>
+<td width='400'><code>fmt/16 (2216)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/19 (2039)</code></td>
+<td width='400'><code>x-fmt/9 (711)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/15 (588)</code></td>
+<td width='400'><code>fmt/40 (367)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/96 (320)</code></td>
+<td width='400'><code>fmt/126 (255)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/276 (185)</code></td>
+<td width='400'><code>fmt/101 (177)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/100 (135)</code></td>
+<td width='400'><code>fmt/61 (113)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/14 (108)</code></td>
+<td width='400'><code>fmt/4 (101)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/111 (80)</code></td>
+<td width='400'><code>fmt/44 (74)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/39 (63)</code></td>
+<td width='400'><code>fmt/950 (61)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/215 (55)</code></td>
+<td width='400'><code>fmt/583 (55)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/50 (52)</code></td>
+<td width='400'><code>fmt/11 (48)</code></td>
+</tr><tr>
+<td width='400'><code>x-fmt/266 (45)</code></td>
+<td width='400'><code>x-fmt/406 (43)</code></td>
+</tr><tr>
+<td width='400'><code>x-fmt/408 (40)</code></td>
+<td width='400'><code>fmt/124 (38)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/3 (37)</code></td>
+<td width='400'><code>x-fmt/263 (33)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/102 (30)</code></td>
+<td width='400'><code>x-fmt/383 (28)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/45 (27)</code></td>
+<td width='400'><code>fmt/122 (26)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/43 (26)</code></td>
+<td width='400'><code>fmt/116 (25)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/412 (24)</code></td>
+<td width='400'><code>fmt/109 (23)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/123 (22)</code></td>
+<td width='400'><code>fmt/244 (22)</code></td>
+</tr><tr>
+<td width='400'><code>x-fmt/394 (22)</code></td>
+<td width='400'><code>fmt/41 (21)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/107 (20)</code></td>
+<td width='400'><code>fmt/505 (20)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/110 (19)</code></td>
+<td width='400'><code>fmt/214 (18)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/53 (18)</code></td>
+<td width='400'><code>fmt/506 (17)</code></td>
+</tr><tr>
+<td width='400'><code>x-fmt/44 (17)</code></td>
+<td width='400'><code>fmt/288 (16)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/558 (15)</code></td>
+<td width='400'><code>fmt/99 (15)</code></td>
+</tr><tr>
+<td width='400'><code>x-fmt/274 (15)</code></td>
+<td width='400'><code>x-fmt/280 (14)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/97 (13)</code></td>
+<td width='400'><code>x-fmt/65 (13)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/353 (12)</code></td>
+<td width='400'><code>fmt/38 (12)</code></td>
+</tr><tr>
+<td width='400'><code>x-fmt/88 (12)</code></td>
+<td width='400'><code>fmt/52 (11)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/57 (11)</code></td>
+<td width='400'><code>fmt/104 (10)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/108 (10)</code></td>
+<td width='400'><code>fmt/37 (10)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/42 (10)</code></td>
+<td width='400'><code>fmt/56 (10)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/609 (10)</code></td>
+<td width='400'><code>fmt/94 (10)</code></td>
+</tr><tr>
+<td width='400'><code>x-fmt/49 (10)</code></td>
+<td width='400'><code>fmt/503 (9)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/55 (9)</code></td>
+<td width='400'><code>fmt/59 (9)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/62 (9)</code></td>
+<td width='400'><code>x-fmt/226 (9)</code></td>
+</tr><tr>
+<td width='400'><code>x-fmt/275 (9)</code></td>
+<td width='400'><code>fmt/559 (8)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/106 (7)</code></td>
+<td width='400'><code>fmt/507 (7)</code></td>
+</tr><tr>
+<td width='400'><code>x-fmt/114 (7)</code></td>
+<td width='400'><code>x-fmt/207 (7)</code></td>
+</tr><tr>
+<td width='400'><code>x-fmt/390 (7)</code></td>
+<td width='400'><code>fmt/133 (6)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/329 (6)</code></td>
+<td width='400'><code>fmt/420 (6)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/423 (6)</code></td>
+<td width='400'><code>x-fmt/115 (6)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/422 (5)</code></td>
+<td width='400'><code>fmt/557 (5)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/560 (5)</code></td>
+<td width='400'><code>x-fmt/391 (5)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/354 (4)</code></td>
+<td width='400'><code>fmt/388 (4)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/473 (4)</code></td>
+<td width='400'><code>fmt/534 (4)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/535 (4)</code></td>
+<td width='400'><code>fmt/561 (4)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/931 (4)</code></td>
+<td width='400'><code>x-fmt/416 (4)</code></td>
+</tr><tr>
+<td width='400'><code>x-fmt/428 (4)</code></td>
+<td width='400'><code>fmt/724 (3)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/75 (3)</code></td>
+<td width='400'><code>x-fmt/235 (3)</code></td>
+</tr><tr>
+<td width='400'><code>x-fmt/420 (3)</code></td>
+<td width='400'><code>fmt/136 (2)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/280 (2)</code></td>
+<td width='400'><code>fmt/32 (2)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/390 (2)</code></td>
+<td width='400'><code>fmt/418 (2)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/537 (2)</code></td>
+<td width='400'><code>fmt/63 (2)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/77 (2)</code></td>
+<td width='400'><code>fmt/78 (2)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/833 (2)</code></td>
+<td width='400'><code>fmt/98 (2)</code></td>
+</tr><tr>
+<td width='400'><code>x-fmt/117 (2)</code></td>
+<td width='400'><code>x-fmt/45 (2)</code></td>
+</tr><tr>
+<td width='400'><code>x-fmt/92 (2)</code></td>
+<td width='400'><code>fmt/132 (1)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/185 (1)</code></td>
+<td width='400'><code>fmt/190 (1)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/281 (1)</code></td>
+<td width='400'><code>fmt/284 (1)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/328 (1)</code></td>
+<td width='400'><code>fmt/34 (1)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/341 (1)</code></td>
+<td width='400'><code>fmt/372 (1)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/396 (1)</code></td>
+<td width='400'><code>fmt/417 (1)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/468 (1)</code></td>
+<td width='400'><code>fmt/487 (1)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/501 (1)</code></td>
+<td width='400'><code>fmt/523 (1)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/533 (1)</code></td>
+<td width='400'><code>fmt/58 (1)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/584 (1)</code></td>
+<td width='400'><code>fmt/611 (1)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/629 (1)</code></td>
+<td width='400'><code>fmt/645 (1)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/657 (1)</code></td>
+<td width='400'><code>fmt/682 (1)</code></td>
+</tr><tr>
+<td width='400'><code>fmt/688 (1)</code></td>
+<td width='400'><code>fmt/76 (1)</code></td>
+</tr><tr>
+<td width='400'><code>x-fmt/119 (1)</code></td>
+<td width='400'><code>x-fmt/219 (1)</code></td>
+</tr><tr>
+<td width='400'><code>x-fmt/257 (1)</code></td>
+<td width='400'><code>x-fmt/268 (1)</code></td>
+</tr><tr>
+<td width='400'><code>x-fmt/367 (1)</code></td>
+<td width='400'><code>x-fmt/429 (1)</code></td>
+</tr><tr>
+<td width='400'><code>x-fmt/453 (1)</code></td>
+<td width='400'><code>x-fmt/64 (1)</code></td>
+</tr><tr>
+<td width='400'><code>x-fmt/8 (1)</code></td>
+<td width='400'><code>x-fmt/91 (1)</code></td>
+</tr></table>
+</br>
+<hr/>
+<h2>Archive File Types in Accession/Extract: </h2>
+<details><summary>More Detail:</br></summary></br>Archive files are files that wrap together one or more files such as Zip files, GZIP files, and TAR files. Knowing an accession/extract contains these objects is important as a single archive file may contain many hundreds of other files that also need to be preserved and looked after.</br></details>
+</br>
+<table style='border-collapse: collapse; border-color: #222222'><tr>
+<td width='160'><code>gz</code></td>
+<td width='160'><code>html</code></td>
+<td width='160'><code>kml</code></td>
+<td width='160'><code>kmz</code></td>
+<td width='160'><code>odp</code></td>
+</tr><tr>
+<td width='160'><code>ps</code></td>
+<td width='160'><code>unk</code></td>
+<td width='160'><code>xml</code></td>
+<td width='160'><code>zip</code></td>
+</tr></table>
+</br>
+<hr/>
+</br>
+</body>
