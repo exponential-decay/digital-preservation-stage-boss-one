@@ -74,14 +74,14 @@ class testinfo:
       self.droid_container = droid_container.replace('#', self.sep)
 
       #sf with container identification
-      self.sf_NOLIMIT = "sf -sig " + self.container.replace('#', self.sep) + "NOLIMIT-1.6.1-v86-july2016-default.sig %DIR%"
-      self.sf_65B = "sf -sig " + self.container.replace('#', self.sep) + "10MB-1.6.1-v86-july2016-default.sig %DIR%" 
-      self.sf_10M = "sf -sig " + self.container.replace('#', self.sep) + "65535-1.6.1-v86-july2016-default.sig %DIR%"
+      self.sf_NOLIMIT = "sf -sig " + self.container.replace('#', self.sep) + "NOLIMIT-1.6.2-v86-july2016-default.sig %DIR%"
+      self.sf_65B = "sf -sig " + self.container.replace('#', self.sep) + "10MB-1.6.2-v86-july2016-default.sig %DIR%" 
+      self.sf_10M = "sf -sig " + self.container.replace('#', self.sep) + "65535-1.6.2-v86-july2016-default.sig %DIR%"
 
       #sf without container identification
-      self.sf_no_NOLIMIT = "sf -sig " + self.no_container.replace('#', self.sep) + "NOLIMIT-1.6.1-v86-july2016-nocontainer-default.sig %DIR%"
-      self.sf_no_65B = "sf -sig " + self.no_container.replace('#', self.sep) + "10MB-1.6.1-v86-july2016-nocontainer-default.sig %DIR%"
-      self.sf_no_10M = "sf -sig " + self.no_container.replace('#', self.sep) + "65535-1.6.1-v86-july2016-nocontainer-default.sig %DIR%" 
+      self.sf_no_NOLIMIT = "sf -sig " + self.no_container.replace('#', self.sep) + "NOLIMIT-1.6.2-v86-july2016-nocontainer-default.sig %DIR%"
+      self.sf_no_65B = "sf -sig " + self.no_container.replace('#', self.sep) + "10MB-1.6.2-v86-july2016-nocontainer-default.sig %DIR%"
+      self.sf_no_10M = "sf -sig " + self.no_container.replace('#', self.sep) + "65535-1.6.2-v86-july2016-nocontainer-default.sig %DIR%" 
 
    def configure_dirs(self, dir):   
       if '\\' in dir:
