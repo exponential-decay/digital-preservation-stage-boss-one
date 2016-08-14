@@ -35,13 +35,14 @@ class testinfo:
    NULL_FILE = "NULL.DROID"
 
    #DROID paths
-   sig_path = "#droid.properties#signatures#no-profile#"
+   sig_path = "#droid.properties#experiment-signature-files#profile#"
    con_profile_path = "#droid.properties#profiles#container#"
    no_con_profile_path = "#droid.properties#profiles#no-container#"
    
    #DROID signature files
    sig_file = "DROID_SignatureFile_V86.xml"
-   container_sig_file = "container-signature-20160727.xml"
+   droid_container_sig_file = "container-signature-20160727.xml"
+   droid_no_container = "no-container-signature-20160727.xml"
 
    #DROID profiles
    profile_home = ".droid6"
@@ -54,8 +55,8 @@ class testinfo:
    nul = " > nul"
 
    #paths to follow
-   container = "siegfried.sigs#container#"
-   no_container = "siegfried.sigs#no-container#"
+   sf_container = "siegfried.sigs#container#"
+   sf_no_container = "siegfried.sigs#no-container#"
 
    #checksum commands
    md5 = "md5deep -r %DIR%"
@@ -73,14 +74,32 @@ class testinfo:
       self.droid = droid.replace('#', self.sep)
 
       #sf with container identification
-      self.sf_NOLIMIT = "sf -sig " + self.container.replace('#', self.sep) + "NOLIMIT-1.6.2-v86-july2016-default.sig %DIR%"
-      self.sf_65B = "sf -sig " + self.container.replace('#', self.sep) + "10MB-1.6.2-v86-july2016-default.sig %DIR%" 
-      self.sf_10M = "sf -sig " + self.container.replace('#', self.sep) + "65535-1.6.2-v86-july2016-default.sig %DIR%"
+      self.sf_NOLIMIT = "sf -sig " + self.sf_container.replace('#', self.sep) + "NOLIMIT-1.6.2-v86-july2016-default.sig %DIR%"
+      self.sf_65B = "sf -sig " + self.sf_container.replace('#', self.sep) + "10MB-1.6.2-v86-july2016-default.sig %DIR%" 
+      self.sf_10M = "sf -sig " + self.sf_container.replace('#', self.sep) + "65535-1.6.2-v86-july2016-default.sig %DIR%"
 
       #sf without container identification
-      self.sf_no_NOLIMIT = "sf -sig " + self.no_container.replace('#', self.sep) + "NOLIMIT-1.6.2-v86-july2016-nocontainer-default.sig %DIR%"
-      self.sf_no_65B = "sf -sig " + self.no_container.replace('#', self.sep) + "10MB-1.6.2-v86-july2016-nocontainer-default.sig %DIR%"
-      self.sf_no_10M = "sf -sig " + self.no_container.replace('#', self.sep) + "65535-1.6.2-v86-july2016-nocontainer-default.sig %DIR%" 
+      self.sf_no_NOLIMIT = "sf -sig " + self.sf_no_container.replace('#', self.sep) + "NOLIMIT-1.6.2-v86-july2016-nocontainer-default.sig %DIR%"
+      self.sf_no_65B = "sf -sig " + self.sf_no_container.replace('#', self.sep) + "10MB-1.6.2-v86-july2016-nocontainer-default.sig %DIR%"
+      self.sf_no_10M = "sf -sig " + self.sf_no_container.replace('#', self.sep) + "65535-1.6.2-v86-july2016-nocontainer-default.sig %DIR%" 
+
+   def copy_signature_files(self):
+      #DROIDHOME//container_sigs
+      #DROIDHOME//signature_files
+      container_home = 'container_sigs'
+      standard_home = 'signature_files'
+      
+      home = self.get_droid_home()
+      droid_container = home + container_home
+      droid_standard  = home + standard_home      
+      
+      standard = (self.cwd + self.sig_path + self.sig_file).replace('#', self.sep)
+      cont = (self.cwd + self.sig_path + self.droid_container_sig_file).replace('#', self.sep)
+      no_cont = (self.cwd + self.sig_path + self.droid_no_container).replace('#', self.sep)
+            
+      shutil.copy(cont, droid_container)      
+      shutil.copy(no_cont, droid_container)
+      shutil.copy(standard, droid_standard)
 
    def configure_dirs(self, dir):   
       if '\\' in dir:
@@ -161,6 +180,7 @@ def write_output(text, time_list):
 def run_tests(dir, no, start_time):
 
    ti = testinfo()
+   ti.copy_signature_files()
    cmd_list = ti.configure_dirs(dir)
 
    for cmd in cmd_list: 
@@ -241,6 +261,8 @@ def main():
    if not args.no or int(args.no) <= 0:
       sys.stderr.write("Must enter a number for iterations.")
       sys.exit(1)
+
+   sys.stderr.write("WARNING: Experiment has started, will overwrite parts of your DROID configuration.\n")
 
    start_time = time.time()      
    run_tests(args.dir, int(args.no), start_time)
