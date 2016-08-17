@@ -75,13 +75,13 @@ class testinfo:
 
       #sf with container identification
       self.sf_NOLIMIT = "sf -sig " + self.sf_container.replace('#', self.sep) + "NOLIMIT-1.6.2-v86-july2016-default.sig %DIR%"
-      self.sf_65B = "sf -sig " + self.sf_container.replace('#', self.sep) + "10MB-1.6.2-v86-july2016-default.sig %DIR%" 
-      self.sf_10M = "sf -sig " + self.sf_container.replace('#', self.sep) + "65535-1.6.2-v86-july2016-default.sig %DIR%"
+      self.sf_10M = "sf -sig " + self.sf_container.replace('#', self.sep) + "10MB-1.6.2-v86-july2016-default.sig %DIR%" 
+      self.sf_65B = "sf -sig " + self.sf_container.replace('#', self.sep) + "65535-1.6.2-v86-july2016-default.sig %DIR%"
 
       #sf without container identification
       self.sf_no_NOLIMIT = "sf -sig " + self.sf_no_container.replace('#', self.sep) + "NOLIMIT-1.6.2-v86-july2016-nocontainer-default.sig %DIR%"
-      self.sf_no_65B = "sf -sig " + self.sf_no_container.replace('#', self.sep) + "10MB-1.6.2-v86-july2016-nocontainer-default.sig %DIR%"
-      self.sf_no_10M = "sf -sig " + self.sf_no_container.replace('#', self.sep) + "65535-1.6.2-v86-july2016-nocontainer-default.sig %DIR%" 
+      self.sf_no_10M = "sf -sig " + self.sf_no_container.replace('#', self.sep) + "10MB-1.6.2-v86-july2016-nocontainer-default.sig %DIR%"
+      self.sf_no_65B = "sf -sig " + self.sf_no_container.replace('#', self.sep) + "65535-1.6.2-v86-july2016-nocontainer-default.sig %DIR%" 
 
    def copy_signature_files(self):
       #DROIDHOME//container_sigs
@@ -124,7 +124,7 @@ class testinfo:
       #sha1
       self.sha1 = self.sha1.replace(self.DIR_TEXT, dir) + self.nul
       
-      return [self.sha1, self.md5, self.droid, self.sf_NOLIMIT, self.sf_65B, self.sf_10M, self.sf_no_NOLIMIT, self.sf_no_65B, self.sf_no_10M]
+      return [self.sha1, self.md5, self.droid, self.sf_NOLIMIT, self.sf_no_NOLIMIT, self.sf_10M, self.sf_no_10M, self.sf_65B, self.sf_no_65B]
 
    def get_droid_profiles(self):
       p0 = self.cwd + self.con_profile_path.replace('#', self.sep)      #containers
@@ -135,7 +135,7 @@ class testinfo:
       p5 = p4 + self.profile_10M
       p6 = p4 + self.profile_65B
       p7 = p4 + self.profile_NOLIMIT   
-      return [p1, p2, p3, p5, p6, p7]
+      return [p3, p7, p1, p5, p2, p6]
 
    def get_droid_home(self):
       home = expanduser("~") 
@@ -188,7 +188,11 @@ def run_tests(dir, no, start_time):
       #initiate a list of times
       time_list = []
 
+      sys.stderr.write(str(no+1) + "\n\n")
+
       for n in range(no+1):
+      
+         sys.stderr.write(cmd + " " + str(n) + "\n\n")
       
          #set DROID profiles so we can change MAX BYTE SCAN
          if 'droid-command-line-6.2.1.jar' in cmd:
