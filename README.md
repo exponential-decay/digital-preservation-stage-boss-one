@@ -20,4 +20,4 @@ Here we present scripts to produce timings for:
 - DROID identification using various performance settings
 - Siegfried identificaiton using various performance settings 
 
-Methodology and results are presented in more detail here: [link]
+Methodology and results are presented in more detail here: http://openpreservation.org/blog/2016/08/22/digital-preservation-stage-boss-one-the-performance-of-file-format-identification-tools-vs-checksum-generation-tools/
