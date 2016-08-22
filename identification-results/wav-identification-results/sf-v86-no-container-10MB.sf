@@ -1,0 +1,216 @@
+---
+siegfried   : 1.6.2
+scandate    : 2016-08-22T16:00:15+12:00
+signature   : C:\Working\git\digital-preservation-stage-boss-one\siegfried.sigs\no-container\10MB-1.6.2-v86-july2016-nocontainer-default.sig
+created     : 2016-08-10T18:28:17+12:00
+identifiers : 
+  - name    : 'pronom'
+    details : 'DROID_SignatureFile_V86.xml; max BOF 10485760; no container signatures'
+---
+filename : 'C:\Working\droid-test\wavs\PM_R18411026_Yellow-breasted_Tit.wav'
+filesize : 124841898
+modified : 2016-07-26T14:19:26+12:00
+errors   : 
+matches  :
+  - ns      : pronom
+    id      : fmt/142
+    format  : 'Waveform Audio (WAVEFORMATEX)'
+    version : 
+    mime    : 'audio/x-wav'
+    basis   : 'extension match wav; byte match at 0, 42'
+    warning : 
+---
+filename : 'C:\Working\droid-test\wavs\PM_R18411030_Tui.wav'
+filesize : 142738508
+modified : 2016-07-26T14:17:15+12:00
+errors   : 
+matches  :
+  - ns      : pronom
+    id      : fmt/142
+    format  : 'Waveform Audio (WAVEFORMATEX)'
+    version : 
+    mime    : 'audio/x-wav'
+    basis   : 'extension match wav; byte match at 0, 42'
+    warning : 
+---
+filename : 'C:\Working\droid-test\wavs\PM_R18411031_Tui.wav'
+filesize : 141181122
+modified : 2016-07-26T14:18:23+12:00
+errors   : 
+matches  :
+  - ns      : pronom
+    id      : fmt/142
+    format  : 'Waveform Audio (WAVEFORMATEX)'
+    version : 
+    mime    : 'audio/x-wav'
+    basis   : 'extension match wav; byte match at 0, 42'
+    warning : 
+---
+filename : 'C:\Working\droid-test\wavs\PM_R18411032_Tui.wav'
+filesize : 135273556
+modified : 2016-07-26T14:17:52+12:00
+errors   : 
+matches  :
+  - ns      : pronom
+    id      : fmt/142
+    format  : 'Waveform Audio (WAVEFORMATEX)'
+    version : 
+    mime    : 'audio/x-wav'
+    basis   : 'extension match wav; byte match at 0, 42'
+    warning : 
+---
+filename : 'C:\Working\droid-test\wavs\PM_R18411033_Tui.wav'
+filesize : 138431572
+modified : 2016-07-26T14:18:49+12:00
+errors   : 
+matches  :
+  - ns      : pronom
+    id      : fmt/142
+    format  : 'Waveform Audio (WAVEFORMATEX)'
+    version : 
+    mime    : 'audio/x-wav'
+    basis   : 'extension match wav; byte match at 0, 42'
+    warning : 
+---
+filename : 'C:\Working\droid-test\wavs\PM_R18411035_Grey_Duck(Parera).wav'
+filesize : 18183400
+modified : 2016-07-26T14:18:23+12:00
+errors   : 
+matches  :
+  - ns      : pronom
+    id      : fmt/142
+    format  : 'Waveform Audio (WAVEFORMATEX)'
+    version : 
+    mime    : 'audio/x-wav'
+    basis   : 'extension match wav; byte match at 0, 42'
+    warning : 
+---
+filename : 'C:\Working\droid-test\wavs\PM_R18411049_W5522_20.wav'
+filesize : 94569022
+modified : 2016-07-26T13:05:18+12:00
+errors   : 
+matches  :
+  - ns      : pronom
+    id      : fmt/6
+    format  : 'Waveform Audio'
+    version : 
+    mime    : 'audio/x-wav'
+    basis   : 'extension match wav; byte match at [[[0 12]] [[12 4]] [[4088 4]]]'
+    warning : 
+---
+filename : 'C:\Working\droid-test\wavs\PM_R18411051_North_Island Fantail_(Piwakawaka)wav.wav'
+filesize : 36894882
+modified : 2016-07-26T14:19:24+12:00
+errors   : 
+matches  :
+  - ns      : pronom
+    id      : fmt/142
+    format  : 'Waveform Audio (WAVEFORMATEX)'
+    version : 
+    mime    : 'audio/x-wav'
+    basis   : 'extension match wav; byte match at 0, 42'
+    warning : 
+---
+filename : 'C:\Working\droid-test\wavs\PM_R18411156_North_Island_Kaka.wav'
+filesize : 139661858
+modified : 2016-07-26T14:20:44+12:00
+errors   : 
+matches  :
+  - ns      : pronom
+    id      : fmt/142
+    format  : 'Waveform Audio (WAVEFORMATEX)'
+    version : 
+    mime    : 'audio/x-wav'
+    basis   : 'extension match wav; byte match at 0, 42'
+    warning : 
+---
+filename : 'C:\Working\droid-test\wavs\PM_R21599279_KB_County.wav'
+filesize : 175248330
+modified : 2016-07-26T14:21:44+12:00
+errors   : 
+matches  :
+  - ns      : pronom
+    id      : fmt/142
+    format  : 'Waveform Audio (WAVEFORMATEX)'
+    version : 
+    mime    : 'audio/x-wav'
+    basis   : 'extension match wav; byte match at 0, 42'
+    warning : 
+---
+filename : 'C:\Working\droid-test\wavs\PM_R24349814_Runaway_Film_In_NZ.wav'
+filesize : 1004546872
+modified : 2016-07-28T09:59:38+12:00
+errors   : 
+matches  :
+  - ns      : pronom
+    id      : fmt/142
+    format  : 'Waveform Audio (WAVEFORMATEX)'
+    version : 
+    mime    : 'audio/x-wav'
+    basis   : 'extension match wav; byte match at 0, 42'
+    warning : 
+---
+filename : 'C:\Working\droid-test\wavs\PM_R24349864_E_PA_TO_HAU.wav'
+filesize : 70627388
+modified : 2016-07-26T14:28:51+12:00
+errors   : 
+matches  :
+  - ns      : pronom
+    id      : fmt/142
+    format  : 'Waveform Audio (WAVEFORMATEX)'
+    version : 
+    mime    : 'audio/x-wav'
+    basis   : 'extension match wav; byte match at 0, 42'
+    warning : 
+---
+filename : 'C:\Working\droid-test\wavs\PM_R24349865_TUHOE.wav'
+filesize : 228500974
+modified : 2016-07-26T15:22:15+12:00
+errors   : 
+matches  :
+  - ns      : pronom
+    id      : fmt/142
+    format  : 'Waveform Audio (WAVEFORMATEX)'
+    version : 
+    mime    : 'audio/x-wav'
+    basis   : 'extension match wav; byte match at 0, 42'
+    warning : 
+---
+filename : 'C:\Working\droid-test\wavs\README.txt'
+filesize : 3135
+modified : 2016-08-12T12:43:27+12:00
+errors   : 
+matches  :
+  - ns      : pronom
+    id      : x-fmt/111
+    format  : 'Plain Text File'
+    version : 
+    mime    : 'text/plain'
+    basis   : 'extension match txt; text match ISO-8859'
+    warning : 
+---
+filename : 'C:\Working\droid-test\wavs\pm_R18411087_Bellbird_Korimako, Makomako.wav'
+filesize : 209331806
+modified : 2016-07-26T14:20:48+12:00
+errors   : 
+matches  :
+  - ns      : pronom
+    id      : fmt/142
+    format  : 'Waveform Audio (WAVEFORMATEX)'
+    version : 
+    mime    : 'audio/x-wav'
+    basis   : 'extension match wav; byte match at 0, 42'
+    warning : 
+---
+filename : 'C:\Working\droid-test\wavs\pm_R18411110_North_Island_Kokako.wav'
+filesize : 141714674
+modified : 2016-07-26T14:20:02+12:00
+errors   : 
+matches  :
+  - ns      : pronom
+    id      : fmt/142
+    format  : 'Waveform Audio (WAVEFORMATEX)'
+    version : 
+    mime    : 'audio/x-wav'
+    basis   : 'extension match wav; byte match at 0, 42'
+    warning : 
