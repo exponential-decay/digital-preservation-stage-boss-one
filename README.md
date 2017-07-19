@@ -3,7 +3,7 @@
 Checksum calculation and format identification performance results for understanding impact when
 managing digital repositories. 
 
-##Intro
+## Intro
 
 Digital preservation 101 says we need two things. Checksums for our digital content and an idea of 
 the range of file formats that the content is encoded in. 
